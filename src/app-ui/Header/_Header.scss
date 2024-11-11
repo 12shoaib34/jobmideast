@@ -1,0 +1,89 @@
+.c-header {
+  position: relative;
+  top: 0px;
+  height: 60px;
+  z-index: 998;
+  .inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 150px;
+    height: 64px;
+    background-color: $white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 36px;
+      left: 6%;
+      right: 3%;
+      width: 88%;
+      height: 40%;
+      border-radius: 100%;
+      box-shadow: 0px 0px 20px 5px $shadow-color;
+    }
+  }
+  nav {
+    display: flex;
+    margin: 0px;
+    &.menu {
+      li {
+        color: $text-color;
+      }
+    }
+    a {
+      list-style: none;
+      padding: 0px 12px;
+      font-weight: 600;
+      color: $secondary;
+
+      &.active {
+        color: $primary;
+      }
+
+      &.go-premium {
+        color: $text-color;
+        font-size: $font-size-sm;
+        // margin-right: 15px;
+
+        .premium-icon {
+          width: 20px;
+          color: $primary;
+          margin: 0px 5px 0px 0px;
+        }
+      }
+    }
+
+    .notifications-icon-container {
+      position: relative;
+      cursor: pointer;
+
+      .notifications-count {
+        position: absolute;
+        top: -7px;
+        right: -5px;
+        font-size: 10px;
+      }
+
+      .notification-icon {
+        color: $primary;
+        font-size: 35px;
+        width: 22px;
+      }
+    }
+  }
+  .logo {
+    width: 230px;
+  }
+  .shadow-box {
+    background: transparent
+      radial-gradient(closest-side at 50% 75%, #9b9b8f -81%, #ffffff00 100%) 0%
+      0% no-repeat padding-box;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+  }
+}

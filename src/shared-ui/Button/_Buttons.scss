@@ -1,0 +1,325 @@
+.c-button {
+  padding: 5px 10px 5px 10px;
+  color: $white;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 25px;
+  font-size: 15px;
+  border-radius: 8px;
+  width: max-content;
+  border: none;
+  transition: 0.1s all linear;
+  background: $blue;
+
+  span {
+    color: $white;
+    transition: 0.1s all linear;
+    font-family: $font-medium !important;
+    font-size: $font-size-sm;
+  }
+
+  .animated-icon {
+    padding: 0px 0px 0px 5px;
+    transition: all 0.3s linear;
+  }
+
+  &:hover {
+    background: $blue;
+
+    .animated-icon {
+      padding: 0px 0px 0px 15px;
+    }
+  }
+
+  &:focus {
+    background: $blue;
+  }
+
+  // themes
+  &.transparent {
+    background: transparent;
+    border: 1px solid $white;
+    &:hover {
+      background: transparent;
+    }
+    &:focus {
+      background: transparent;
+    }
+    color: $white;
+    span {
+      color: $text-color;
+    }
+    box-shadow: none;
+    &.red {
+      border: none;
+      background-color: transparent;
+      span {
+        color: $red;
+      }
+      &:focus {
+        background-color: unset;
+      }
+      &:hover {
+        background-color: unset;
+      }
+    }
+    &.blue {
+      border: none;
+      background-color: transparent;
+      span {
+        color: $blue;
+      }
+    }
+  }
+
+  &.outlined {
+    background: $white;
+    border: 1px solid $primary;
+
+    span {
+      color: $primary;
+    }
+
+    &:hover {
+      background: $primary;
+
+      span {
+        color: $white;
+      }
+    }
+
+    &.tag {
+      background: $white;
+      border: 1px solid $primary;
+
+      span {
+        color: $primary;
+      }
+    }
+  }
+  &.outlined-green {
+    background: $white;
+    border: 1px solid $green;
+
+    span {
+      color: $green;
+    }
+
+    &:hover {
+      background: $green;
+
+      span {
+        color: $white;
+      }
+    }
+
+    &:focus {
+      background: $green;
+      span {
+        color: $white;
+      }
+    }
+  }
+  &.outlined-red {
+    background: $white;
+    border: 1px solid $red;
+
+    span {
+      color: $red;
+    }
+
+    &:hover {
+      background: $red;
+
+      span {
+        color: $white;
+      }
+    }
+
+    &:focus {
+      background: $red;
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &.light {
+    background: linear-gradient(
+      90deg,
+      rgba(106, 210, 89, 1) 0%,
+      rgba(0, 176, 250, 1) 100%
+    );
+    &:hover {
+      background: linear-gradient(
+        90deg,
+        rgba(106, 210, 89, 1) 0%,
+        rgba(0, 176, 250, 1) 100%
+      );
+    }
+    &:focus {
+      background: linear-gradient(
+        90deg,
+        rgba(106, 210, 89, 1) 0%,
+        rgba(0, 176, 250, 1) 100%
+      );
+    }
+    color: $white;
+  }
+
+  &.primary {
+    background: $primary;
+    &:hover {
+      background: $primary;
+    }
+    &:focus {
+      background: $primary;
+    }
+    color: $white;
+  }
+
+  &.green {
+    background: $green;
+    &:hover {
+      background: $green;
+    }
+    &:focus {
+      background: $green;
+    }
+    color: $white;
+  }
+
+  &.purple {
+    background: $light-purple;
+    &:hover {
+      background: $light-purple;
+    }
+    &:focus {
+      background: $light-purple;
+    }
+    color: $white;
+  }
+
+  &.shadowed {
+    background: $white;
+    box-shadow: 0 0 16px $shadow-color;
+    span {
+      color: $text-color;
+    }
+    svg {
+      color: $text-color !important;
+      &.highlighted {
+        color: $primary !important;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background: $primary;
+      span {
+        color: $white;
+      }
+      svg {
+        color: $white !important;
+        &.highlighted {
+          color: $white !important;
+        }
+      }
+    }
+  }
+
+  &.red-radian {
+    background: transparent linear-gradient(90deg, #ff245e 0%, #c864dd 100%) 0%
+      0% no-repeat padding-box;
+    &:hover {
+      background: transparent linear-gradient(90deg, #ff245e 0%, #c864dd 100%)
+        0% 0% no-repeat padding-box;
+    }
+    &:focus {
+      background: transparent linear-gradient(90deg, #ff245e 0%, #c864dd 100%)
+        0% 0% no-repeat padding-box;
+    }
+  }
+
+  &.grey {
+    background: $grey;
+    &:hover {
+      background: $grey;
+    }
+    &:focus {
+      background: $grey;
+    }
+  }
+  &.red {
+    background: $red;
+    &:hover {
+      background: $red;
+    }
+    &:focus {
+      background: $red;
+    }
+  }
+
+  //sizes
+  &.large {
+    width: 200px;
+  }
+
+  &.small {
+    min-width: 90px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    border-radius: 30px;
+    span {
+      font-size: $font-size-x-sm;
+    }
+  }
+  &.xsmall {
+    min-width: 70px;
+    padding: 2px 0px;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    span {
+      font-size: $font-size-x-sm;
+    }
+  }
+
+  &.rounded {
+    width: 36px;
+    height: 36px;
+    padding: 0px !important;
+    border-radius: 6px !important;
+    font-size: 18px;
+  }
+  &.rounded-outlined {
+    width: 36px;
+    height: 36px;
+    padding: 0px !important;
+    border-radius: 6px !important;
+    background-color: transparent;
+    border: 1px solid $primary;
+    font-size: 18px;
+  }
+  &.rounded-small {
+    width: 20px;
+    height: 20px;
+    padding: 0px !important;
+    border-radius: 6px !important;
+    font-size: 15px;
+
+    span {
+      margin-top: 0;
+    }
+  }
+}
+.ant-btn:hover,
+.ant-btn:focus {
+  color: $white !important;
+}

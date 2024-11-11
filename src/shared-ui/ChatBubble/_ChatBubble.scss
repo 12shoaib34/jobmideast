@@ -1,0 +1,129 @@
+.chat-bubble {
+  display: flex;
+  max-width: 500px;
+
+  .chat-head {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+  }
+  .text {
+    margin: 0.5em 0 0 0.5em;
+
+    .title {
+      font-size: $font-size-md;
+      font-family: $font-subtitle;
+      color: $secondary;
+      text-transform: capitalize;
+    }
+    .title-invitation {
+      margin: 2em 0 1em 0;
+      font-size: $font-size-sm;
+      font-family: $font-subtitle;
+    }
+    .time-stamp {
+      font-size: $font-size-x-sm;
+      color: $text-color;
+    }
+    .chat-message {
+      margin: 0.5em 0 0 0;
+      font-size: $font-size-sm;
+      color: $text-color;
+      // word-break:break-all;
+    }
+  }
+  &.isSender {
+    align-self: flex-end;
+    .chat-head {
+      order: 2;
+      margin: 0 0 0 0.5em;
+    }
+    .text {
+      order: 1;
+      .title {
+        text-align: right;
+      }
+      .time-stamp {
+        text-align: right;
+      }
+      .chat-message {
+        text-align: left;
+        word-break: break-all;
+      }
+    }
+  }
+}
+.c-interview-modal {
+  .modal-content {
+  }
+  .c-interview-modal-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 10px;
+    background-color: $blue;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+    h1 {
+      color: $white;
+      font-size: $font-size-lg;
+      margin: 0;
+      transform: translate(10px, 10px);
+    }
+  }
+
+  .form-rows {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0;
+    flex: 2;
+  }
+}
+
+.img-view {
+  max-height: 300px !important;
+  max-width: 300px !important;
+  border-radius: 8px;
+  object-fit: cover;
+  &.img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.ant-image-preview-content {
+  .ant-image-preview-body {
+    .ant-image-preview-operations {
+      background: rgba(0, 0, 0, 0.5);
+      .ant-image-preview-operations-operation {
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.download-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .user-items-expire {
+    color: $primary;
+    font-size: $font-size-x-sm;
+    margin: 8px 0 0 0;
+  }
+
+  .download {
+    margin: 2px 0 0 0;
+    font-size: $font-size-x-sm;
+  }
+}
+
+.increaseEmojiSize {
+  font-size: 24px !important;
+}

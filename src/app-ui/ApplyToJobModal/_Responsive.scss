@@ -1,0 +1,108 @@
+@media only screen and (max-width: 1070px) {
+  .apply-job-modal{
+    .modal-dialog{
+      .modal-content{
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .apply-job-modal{
+    .modal-dialog{
+      .modal-content{
+        padding: 30px !important;
+      }
+    }
+  }
+  .apply-job-modal .modal-dialog .modal-content .main-wrapper .right-section .add-media-btn {
+      left: 85px;
+      top: -10px;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .apply-job-modal{
+    .modal-dialog{
+      .modal-content{
+        .main-wrapper{
+          .left-section{
+            flex-basis: 60%;
+            .selected-div {
+              .selected-cv {
+                .selected-cv-img {
+                  width: 80px ;
+                  height: 80px;
+                }
+              }
+            }
+          }
+          .right-section{
+            flex-basis: 40%;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 840px) {
+  .apply-job-modal{
+    .modal-dialog{
+      .modal-content{
+        .main-wrapper{
+          .left-section{
+            flex-basis: 60%;
+            .selected-div {
+              .selected-cv {
+                gap: 5px;
+                .selected-cv-img {
+                  width: 60px ;
+                  height: 60px;
+                }
+              }
+            }
+          }
+          .right-section{
+            // .selected-cv{
+            //   flex-direction: column;
+            //   .selected-cv-img{
+            //     height: 80px;
+            //     width: 80px;
+            //   }
+            // }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .apply-job-modal{
+    .modal-dialog{
+      .modal-content{
+        width: 92% !important;
+        .main-wrapper{
+          .left-section{
+            .selected-div {
+              .selected-cv {
+                // gap: 3px;
+                .selected-cv-img {
+                  width: 50px ;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } 
+}
+
+@media only screen and (max-width: 667px) {
+  .upload-cv{
+
+  }
+}

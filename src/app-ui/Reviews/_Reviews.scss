@@ -1,0 +1,194 @@
+@import "../../assets/scss/variables";
+.d-flex {
+  grid-gap: 10px !important;
+}
+.reviews-detail {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #00000026;
+
+  .user-image {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .about-user {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .info {
+      width: 70%;
+      padding: 0 0 0 20px;
+      h1 {
+        font-family: $font-bold;
+      }
+    }
+    .info-full {
+      width: 100%;
+      padding: 0 0 0 20px;
+    }
+
+    .ratings {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0 0px;
+
+      .plus-btn {
+        margin: 20px 0 0 0;
+      }
+    }
+    .ratings-absolute {
+      position: absolute;
+      right: 0;
+      .report-review {
+        font-family: $font-subtitle;
+        cursor: pointer;
+        text-decoration: black underline;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+
+    .user-name {
+      font-size: $font-size-lg;
+      color: $secondary;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .user-job-type {
+      font-size: $font-size-sm;
+      margin: 0;
+    }
+
+    .user-desc {
+      font-size: $font-size-md;
+      margin: 5px 0 0 0px;
+    }
+  }
+}
+.respond-review-modal {
+  .modal-content {
+    max-width: 750px !important;
+    width: 100%;
+
+    .review-modal-wrapper {
+      padding: 10px;
+    }
+
+    .reviews-detail {
+      border-bottom: none;
+      .about-user .user-name {
+        font-family: $font-subtitle;
+      }
+
+      .about-user .ratings-absolute .report-review {
+        font-size: 10px;
+        text-align: unset;
+        margin-bottom: 1em;
+      }
+    }
+    .c-text-area {
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 0 10px $shadow-color;
+      padding: 10px 12px;
+      &:focus {
+        border: none;
+      }
+      &:hover {
+        border: none;
+      }
+    }
+    .ant-form {
+      .c-button {
+        padding: 9px 32px;
+      }
+    }
+  }
+  .header {
+    border-bottom: 2px solid $text-color;
+    width: fit-content;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .reviews-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    .about-user {
+      margin: 10px 0 0 0;
+      .ratings-absolute {
+        position: absolute;
+        right: 0;
+        top: -65%;
+        .report-review {
+          font-family: $font-subtitle;
+          cursor: pointer;
+          text-decoration: black underline;
+          font-size: 13px;
+          text-align: center;
+        }
+      }
+      .info-full {
+        padding-left: 0;
+        padding-top: 20px;
+      }
+      .info {
+        width: 100%;
+        padding: 0;
+      }
+      .ratings {
+        position: absolute;
+        right: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        /* margin: 0 0 10px 0; */
+        min-width: 100px;
+        top: -90px;
+
+        .plus-btn {
+          margin: 0 0 0 10px;
+        }
+      }
+      .c-button.rounded {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    .user-image {
+      // height: 150px;
+      // width: 100%;
+      // border-radius: unset;
+      // object-fit: cover;
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .review-modal-flex {
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+
+    span {
+      top: 0 !important;
+    }
+  }
+}

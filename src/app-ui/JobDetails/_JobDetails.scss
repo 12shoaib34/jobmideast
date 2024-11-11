@@ -1,0 +1,357 @@
+@import '../../assets/scss/variables';
+// C O M M O N _ C L A S S
+.small-text-common {
+  color: $white;
+  font-size: $font-size-md-sm;
+  margin: 0;
+}
+
+.c-job-detail-card {
+  .header {
+    z-index: 1;
+    position: relative;
+    min-height: 250px;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: flex-end;
+    .back-btn {
+      display: none;
+    }
+
+    .job-banner-img {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .banner-img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .banner-items {
+      width: 100%;
+      display: flex;
+      flex-direction: auto;
+      align-items: flex-end;
+      margin-top: 4em;
+      max-width: unset;
+      justify-content: space-between;
+      .company-details-wrapper {
+        // background: #5d5d5d82;
+      }
+
+      .display-flex {
+        display: flex;
+        align-items: flex-end;
+      }
+      .company-details {
+        padding-left: 10px;
+        height: max-content;
+        img {
+          height: 18px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        &.center {
+          display: flex;
+          align-items: flex-start;
+        }
+        .company-name {
+          font-size: $font-size-lg;
+          color: $white;
+          font-family: $font-bold;
+        }
+        .company-type {
+          font-size: $font-size-x-sm;
+          color: $white;
+        }
+      }
+      .company-category {
+        color: $light-grey;
+        font-weight: lighter;
+        font-size: $font-size-sm;
+      }
+
+      .company-img {
+        img {
+          width: 110px;
+          height: 110px;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .video-section {
+    display: flex;
+    justify-content: center;
+    .company-profile-video {
+      border-radius: 15px;
+      height: 350px;
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+    }
+  }
+
+  .job-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    padding-top: 1em;
+    max-width: 100%;
+    margin-left: 10px;
+
+    .details-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 0px;
+      margin-right: 20px;
+
+      .job-title {
+        margin: 0px;
+        font-size: $font-size-lg;
+        margin-bottom: 20px;
+        position: relative;
+        &::after {
+          content: '';
+          position: absolute;
+          left: -24px;
+          top: calc(50% - 0px);
+          height: 2px;
+          width: 15px;
+          background-color: #2d2f44;
+        }
+      }
+
+      .title {
+        font-family: $font-subtitle;
+      }
+
+      .actions-wrapper {
+        display: flex;
+        max-width: unset;
+        width: unset;
+        justify-content: space-between;
+        align-items: center;
+        // margin-right: 10px;
+        // margin: 0 10px 20px 0;
+        .apply-btn {
+          padding: 9px 32px;
+        }
+        .apply-btn:hover {
+          background: unset;
+          span {
+            color: black;
+          }
+        }
+
+        .apply-btn:focus {
+          background: unset;
+          span {
+            color: black;
+          }
+        }
+
+        button {
+          margin: 0px 2px;
+        }
+        .icon {
+          height: 18px;
+          width: 18px;
+        }
+        .following-icon {
+          // display: none;
+          background-image: url('./../../assets/images/sidebar/icons/following-icon-blue.svg');
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: center;
+        }
+        .c-button:hover > .following-icon {
+          background-image: url('./../../assets/images/sidebar/icons/following-icon.svg') !important;
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: center;
+        }
+      }
+    }
+
+    .content-box {
+      display: flex;
+      justify-content: space-between;
+      .mobile-view {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        span {
+          padding: 0;
+        }
+        .job-title {
+          margin-bottom: 10px;
+          font-size: 16px;
+          font-family: 'Gordita-Medium';
+          position: relative;
+        }
+        .job-title::after {
+          content: '';
+          position: absolute;
+          left: -24px;
+          top: calc(50% - 0px);
+          height: 2px;
+          width: 15px;
+          background-color: #2d2f44;
+        }
+        .actions-wrapper {
+          button {
+            margin-bottom: 10px;
+            width: 110px;
+          }
+        }
+      }
+      &.first {
+        padding: 0px 0px 0px 0px;
+      }
+
+      .content-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+
+        .content-block {
+          display: flex;
+          flex-direction: column;
+          padding: 0px 20px 0px 0px;
+          margin: 0px 0px 20px 0px;
+
+          .block-title {
+            font-size: $font-size-md;
+            color: $secondary;
+            position: relative;
+          }
+          .block-title::after {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: calc(50% - 0px);
+            height: 2px;
+            width: 15px;
+            background-color: #2d2f44;
+          }
+
+          .block-text {
+            font-size: $font-size-sm;
+            padding: 0px 0px 0px 20px;
+          }
+
+          .block-video {
+            height: 350px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+
+          .block-more {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0px 0px 0px;
+            justify-content: space-between;
+          }
+
+          .block-map {
+            width: 100%;
+            height: 350px;
+          }
+
+          .c-list {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 0px 0px 0px 35px;
+            height: 100%;
+            list-style-type: circle;
+
+            li {
+              padding: 5px 15px 5px 0px;
+              justify-content: space-between;
+              font-size: $font-size-sm;
+
+              &::marker {
+                color: $text-color;
+                font-size: $font-size-md;
+              }
+            }
+          }
+
+          &:last-of-type {
+            margin-bottom: 0px;
+          }
+        }
+        .markup > * {
+          font-size: 12px !important;
+        }
+        .markup {
+          padding: 14px;
+          padding-top: 0;
+          padding-bottom: 0;
+          strong {
+            font-family: $font-bold;
+          }
+          ul {
+            margin: 0;
+            li {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .benefits-list {
+        background: #fff;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 0 16px $shadow-color;
+        border-radius: 10px;
+        padding: 0px;
+        min-width: 250px;
+        height: 100%;
+
+        span {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 0.5px solid $border-color;
+          padding: 10px 15px;
+          font-size: $font-size-x-sm;
+          &:first-of-type {
+            padding: 15px 15px;
+          }
+          &:last-child {
+            border-bottom: unset;
+          }
+
+          .title {
+            margin: 0px;
+            font-size: $font-size-sm;
+          }
+        }
+      }
+    }
+  }
+}

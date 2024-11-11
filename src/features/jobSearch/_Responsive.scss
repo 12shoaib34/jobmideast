@@ -1,0 +1,46 @@
+@import "../../assets/scss/variables";
+@media screen and (max-width: 540px) {
+  .jobs-page {
+    .jobs-wrapper {
+      width: 100%;
+
+      .find-jobs-section {
+        flex-grow: 1;
+      }
+      .job-details {
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        transform: translateX(100%);
+        transition: all ease 0.3s;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        // .navigation-header {
+        //   height: 60px;
+        //   background-color: whitesmoke;
+        // }
+      }
+      .job-details-show {
+        transform: translateX(0);
+        transition: all ease 0.3s;
+      }
+      .jobs-list {
+        padding: 10px 10px 10px 10px;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .jobs-page {
+    .jobs-wrapper {
+      .find-jobs-section {
+        flex-basis: 50%;
+      }
+      .job-details {
+        flex-basis: 50%;
+      }
+    }
+  }
+}

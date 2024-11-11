@@ -1,0 +1,44 @@
+// app ui imports
+
+@import 'Sidebar/Sidebar';
+@import 'Header/Header';
+@import 'TaskList/TaskList';
+@import 'ChatList/ChatList';
+@import 'Reviews/Reviews';
+@import 'UserProfile/UserProfile';
+@import 'ImageUploader/ImageUploader';
+@import 'VideoQuestionares/VideoQuestionares';
+@import 'PremiumFeature/PremiumFeature';
+
+//shared ui imports
+
+@import '../shared-ui/Avatar/Avatar';
+@import '../shared-ui/Button/Buttons';
+@import '../shared-ui/ChatBubble/ChatBubble';
+@import '../shared-ui/ChatInput/ChatInput';
+@import '../shared-ui/ChatListItem/ChatListItem';
+@import '../shared-ui/ProfileListItem/ProfileListItem';
+@import '../shared-ui/InterviewCard/InterviewCard';
+@import '../shared-ui/Modal/Modal';
+@import '../shared-ui/ProfileCard/ProfileCard';
+@import '../shared-ui/ProfileDetails/ProfileDetails';
+@import '../shared-ui/StatisticCard/StatisticCard';
+@import '../shared-ui/Tag/Tag';
+@import '../shared-ui/TaskItem/TaskItem';
+@import '../shared-ui/UserProfile/UserProfile';
+@import '../shared-ui/CompanyCard/CompanyCard';
+@import '../shared-ui/PostJobForms/PostJobFrom';
+@import '../shared-ui/FilePicker/FilePicker';
+@import '../shared-ui/MediaPicker/MediaPicker';
+@import '../shared-ui/ImagesGallery/ImagesGallery';
+@import '../shared-ui/TagRender/TagRander';
+
+//Responsive imports
+@import 'Sidebar/Responsive';
+@import '../shared-ui/Modal/Responsive';
+@import '../shared-ui/ChatListItem/Responsive';
+@import '../shared-ui/ProfileListItem/Responsiveness';
+@import '../layout/Responsive';
+@import '../app-ui/Header/Responsive';
+@import 'UserProfile/Responsive';
+@import '../shared-ui/ChatBubble/Responsive';

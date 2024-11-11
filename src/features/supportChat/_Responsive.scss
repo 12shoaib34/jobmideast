@@ -1,0 +1,180 @@
+@import "../../assets/scss/variables";
+
+@media screen and (max-width: 540px) {
+  .support {
+    .user-profile {
+      position: absolute;
+      background-color: $white;
+      width: 100%;
+      transform: translateX(100%);
+      transition: all ease 0.3s;
+      // top: 0;
+      // left: 0;
+    }
+    .main-chat-wrapper {
+      position: relative;
+      overflow-x: hidden;
+      .user-profile {
+      }
+      .chatlist-container {
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        height: 100%;
+        .chat-list-panel {
+          width: 100%;
+          .chat-list-scroll {
+            height: calc(100% - 120px);
+            overflow-y: scroll;
+          }
+        }
+      }
+      .chat-wrapper {
+        position: absolute;
+        background-color: $white;
+        width: 100%;
+        transform: translateX(100%);
+        transition: all ease 0.3s;
+        .chat-inner {
+          min-width: unset;
+        }
+        .chat-header {
+          display: none;
+        }
+      }
+      .chat-wrapper-show {
+        transform: translateX(0);
+        z-index: 400;
+        // padding-top: 50px;
+        .chat-inner {
+          height: calc(100% - 66px);
+        }
+
+        .chat-header {
+          display: unset;
+          display: flex;
+          align-items: center;
+          justify-content: space-between !important;
+          padding: 14px;
+          // background-color: whitesmoke;
+          height: 66px;
+          .back-btn {
+            // display: inline;
+            display: unset !important;
+            height: fit-content;
+            width: fit-content;
+            img {
+              width: 36px;
+              height: 36px;
+              object-fit: contain;
+            }
+          }
+          .view-profile-btn {
+            span {
+              color: $primary;
+            }
+          }
+        }
+      }
+      .c-modal {
+        display: none;
+      }
+    }
+    .user-profile {
+      height: calc(100%);
+      z-index: 3;
+      display: unset !important;
+      .chat-header {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px;
+        // background-color: whitesmoke;
+        height: 66px;
+      }
+      .profile-container {
+        height: calc(100% - 66px);
+      }
+    }
+
+    .user-profile-show {
+      transform: translateX(0);
+      z-index: 3;
+      transition: all ease 0.3s;
+      height: 100%;
+      .profile-container {
+        width: 100%;
+        height: calc(100% - 66px);
+      }
+      .chat-header {
+        display: unset;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px;
+        // background-color: whitesmoke;
+        height: 66px;
+
+        .back-btn {
+          // display: inline;
+          height: fit-content;
+          width: fit-content;
+          img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .height-fix {
+    .main-chat-wrapper {
+      width: 100%;
+      .chatlist-container {
+        .chat-list-panel {
+          width: 100%;
+          .chat-list-scroll {
+            .chat-list-item {
+              .chat-text {
+                .text {
+                  width: 150px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .chat-wrapper {
+        width: 100%;
+        .chat-header {
+          display: unset;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 14px;
+          // background-color: whitesmoke;
+          height: 66px;
+
+          .back-btn {
+            // display: inline;
+            display: none;
+            height: fit-content;
+            width: fit-content;
+            img {
+              width: 36px;
+              height: 36px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+      .user-profile {
+        display: none;
+      }
+    }
+  }
+}

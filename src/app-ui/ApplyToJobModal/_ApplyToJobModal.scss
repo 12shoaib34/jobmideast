@@ -1,0 +1,247 @@
+@import "../../assets/scss/variables";
+
+.apply-job-modal {
+  .modal-dialog {
+    .modal-content {
+      .main-wrapper {
+        display: flex;
+        .left-section {
+          flex-basis: 70%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          background-color: $white;
+          .select-lg {
+            .title {
+              display: flex;
+              justify-content: center;
+              margin-bottom: 8px;
+            }
+          }
+          .ant-upload.ant-upload-drag {
+            border-radius: 24px;
+            width: 300px;
+            .ant-upload-text {
+              font-family: $font-subtitle !important;
+            }
+            .ant-upload-hint {
+              font-size: $font-size-x-sm;
+              margin-bottom: 4px;
+            }
+          }
+          .selected-div {
+            width: 100%;
+
+            .header {
+              display: flex;
+              justify-content: center;
+              .ant-divider-vertical {
+                height: unset;
+              }
+              span {
+                font-size: $font-size-x-sm;
+                cursor: pointer;
+                &:last-child {
+                  color: red;
+                }
+              }
+            }
+            .selected-cv {
+              padding: 2em 1em 0 1em;
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              gap: 1em;
+              .selected-cv-img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+          }
+          .cv-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: calc(100% - 400px);
+            width: 65%;
+            background-color: $white;
+
+            .header {
+              padding: 1em;
+              position: relative;
+              z-index: 20;
+              width: 100%;
+              background-color: $white;
+            }
+            .react-pdf__Document {
+              position: relative;
+              overflow-y: auto;
+              height: 400px;
+              padding-left: 2em;
+              border-bottom: 1px solid rgba($color: #545454, $alpha: 0.3);
+            }
+          }
+          .react-pdf__Page__textContent {
+            display: none;
+          }
+        }
+        .right-section {
+          position: relative;
+          padding-left: 2em;
+          flex-basis: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-left: 1px solid rgba($color: #545454, $alpha: 0.3);
+          .add-media-btn {
+            position: relative;
+            left: 100px;
+            top: -15px;
+          }
+          .profile-menu > .ant-dropdown-menu {
+            border-radius: 15px;
+            .ant-dropdown-menu-item {
+              font-size: $font-size-sm;
+            }
+          }
+
+          .selected-cv-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          .c-text-box {
+            width: 100%;
+            .c-text-area {
+              width: 100%;
+              resize: none;
+              height: unset !important;
+              border-radius: 20px;
+              padding: 10px 20px;
+            }
+          }
+          .logo {
+            width: 70%;
+          }
+          .text-section {
+            padding: 2em;
+            ul {
+              padding-left: 0;
+              li {
+                padding: 0;
+                font-size: $font-size-sm;
+                a {
+                  font-size: $font-size-sm;
+                  color: $primary;
+                }
+              }
+            }
+            .title {
+              font-family: $font-subtitle;
+            }
+            .content {
+              font-size: $font-size-sm;
+            }
+          }
+        }
+        .right-section-2 {
+          flex-basis: 30%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 602px;
+          box-shadow: -10px 0px 10px -10px $shadow-color;
+
+          .logo {
+            width: 70%;
+          }
+          .text-section {
+            padding: 2em 0 2em 2em;
+            ul {
+              padding-left: 0;
+              li {
+                padding: 0;
+                font-size: $font-size-sm;
+                margin-bottom: 4px;
+                a {
+                  font-size: $font-size-sm;
+                  color: $primary;
+                }
+              }
+            }
+            .title {
+              font-family: $font-subtitle;
+            }
+            .content {
+              font-size: $font-size-sm;
+            }
+          }
+        }
+        .left-section-2 {
+          flex-basis: 70%;
+          .header {
+            width: 100%;
+          }
+          .selected-person {
+            display: flex;
+            align-items: center;
+            .selected-cv-img {
+              width: 70px;
+              height: 70px;
+              object-fit: cover;
+              border-radius: 50%;
+              margin: 0 8px 0 0;
+            }
+            display: flex;
+            .fee-form {
+              .name {
+                font-family: $font-subtitle;
+              }
+              .fee-row {
+                display: flex;
+                align-items: flex-end;
+                .ant-divider-vertical {
+                  height: 2em;
+                  margin: 0 16px;
+                  bottom: 4px;
+                }
+                .c-input {
+                  label {
+                    font-size: $font-size-sm;
+                  }
+                  &.counter {
+                    position: relative;
+                    input {
+                      text-align: center;
+                    }
+                    .rounded {
+                      width: 20px;
+                      height: 20px;
+                      &.minus {
+                        position: absolute;
+                        left: 6px;
+                        bottom: 6px;
+                        z-index: 23;
+                      }
+                      &.plus {
+                        position: absolute;
+                        right: 6px;
+                        bottom: 6px;
+                        z-index: 23;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

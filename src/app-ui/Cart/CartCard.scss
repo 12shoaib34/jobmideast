@@ -1,0 +1,110 @@
+@import "../../assets/scss/variables";
+
+.cart-component {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 10px $shadow-color;
+  max-width: 400px;
+  margin-left: auto;
+  margin-top: 40px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 700px;
+  .logo {
+    position: absolute;
+    width: 140px;
+    right: 0;
+  }
+
+  .heading {
+    padding-inline: 20px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    height: 100px;
+  }
+
+  .overflow-container {
+    .ant-empty {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    // padding-inline: 20px;
+    height: calc(100% - 200px);
+    min-height: 500px;
+    overflow-y: auto;
+    .second-box {
+      padding-inline: 20px;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
+      padding-bottom: 10px;
+
+      p {
+        margin: 0px;
+        padding-left: 25px;
+        font-size: 10px;
+        padding-top: 12px;
+      }
+      .sub-heading {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        font-size: 14px;
+
+        .counter-input {
+          input {
+            height: 30px !important;
+          }
+        }
+      }
+
+      .sub-heading {
+        .right-text {
+          width: 110px;
+        }
+        .cross-icon {
+          cursor: pointer;
+          color: red;
+          font-weight: bolder;
+        }
+      }
+    }
+    .ant-divider {
+      margin: 12px 0;
+    }
+  }
+  .buton-box {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .vat {
+      font-size: 12px;
+      font-family: "Gordita-Regular";
+      margin-right: 15px;
+    }
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .cart-component {
+    .c-input {
+      width: 100%;
+      max-width: unset !important;
+      min-width: unset !important;
+    }
+  }
+}

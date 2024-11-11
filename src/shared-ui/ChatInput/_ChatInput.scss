@@ -1,0 +1,145 @@
+.text-field-container {
+  width: 100%;
+  position: relative;
+  & .text-field {
+    width: 100%;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    padding: 6px 0;
+    border-radius: 25px;
+    background-color: $white;
+    height: 100%;
+    .ant-form-item {
+      margin-bottom: 0 !important;
+
+      & .ant-input:focus,
+      .ant-input-focused {
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    & .items {
+      display: flex;
+      overflow: hidden;
+
+      & .text-field-btns {
+        border: none;
+        outline: none;
+        width: max-content;
+        background: transparent;
+        border-radius: 50px;
+        margin: 0 4px 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+
+        img {
+          // height: 28px;
+          // width: 28px;
+          height: 34px;
+          width: 31px;
+        }
+      }
+
+      & .type-text {
+        border: none;
+        width: 100%;
+        margin: auto;
+      }
+    }
+    // .c-button {
+    //   padding: 4px 6px;
+    // }
+  }
+  .buttons-wrapper {
+    width: 90px;
+    position: relative;
+  }
+  .chat-btns-right {
+    display: flex;
+    position: absolute;
+    // right: 0px;
+    // bottom: 2px;
+    right: 8px;
+    bottom: 2px;
+    z-index: 100;
+
+    button.text-field-btns {
+      padding: 0;
+    }
+    .voice-icon {
+      height: 28px !important;
+      width: 30px !important;
+    }
+  }
+  .chat-btns-left {
+    display: flex;
+    position: absolute;
+    left: 4px;
+    bottom: 5px;
+    z-index: 100;
+
+    button.text-field-btns {
+      padding: 0;
+    }
+
+    img {
+      &:first-child {
+        height: 26px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .height-fix {
+    .main-chat-wrapper {
+      .chat-wrapper {
+        .c-chat-input {
+          width: 100%;
+          padding: 0 10px;
+          bottom: 0px;
+          // .plus-btn-text-field {
+          //   position: absolute;
+          //   right: 2px;
+          //   top: 9px;
+          //   width: 30px;
+          //   height: 30px;
+          // }
+        }
+        .chat-inner {
+          padding-bottom: 2em;
+        }
+      }
+    }
+  }
+  .text-field-container {
+    width: 100%;
+    .text-field {
+      padding: 4px 10px;
+      .items {
+        .text-field-btns {
+          padding: 0;
+          img {
+            height: 25px;
+            width: 25px;
+          }
+        }
+      }
+      .c-button {
+        padding: 4px 0;
+      }
+    }
+    .chat-btns-right {
+      bottom: 5px;
+      z-index: 100;
+      right: 0 px;
+    }
+    .chat-btns-left {
+      bottom: 5px;
+      z-index: 100;
+      left: 0px;
+    }
+  }
+}

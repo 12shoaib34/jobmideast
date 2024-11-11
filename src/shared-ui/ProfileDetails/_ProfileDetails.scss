@@ -1,0 +1,90 @@
+.user-profile-details {
+  display: flex;
+  flex: 4;
+  // background: plum;
+  flex-direction: column;
+  // border: solid 1px #d4d4d4;
+  // border-radius: 15px;
+  padding: 15px;
+  gap: 10px;
+  padding-top: 18px;
+  justify-content: space-between;
+  min-width: 350px;
+  min-height: 200px;
+  max-height: 200px;
+  margin: 0 10px 0 0;
+  margin-top: 8px;
+  // padding-bottom: 18px;
+
+  // display: none;
+
+  .btn-row {
+    margin: -10px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    // position: absolute;
+    // display: none;
+    // background: red;
+    // flex-direction: row;
+    margin-left: -10px;
+    // bottom: 10px;
+    // left: 0;
+    .c-button {
+      padding: 4px 16px;
+      span {
+        font-size: 11px;
+      }
+    }
+
+    .test {
+      margin: 10px 0 0 0;
+    }
+    .tag {
+      img {
+        margin-right: 4px;
+      }
+    }
+  }
+  p {
+    align-self: flex-start;
+    margin-top: 0;
+    font-size: $font-size-sm;
+  }
+  .parent {
+    width: 100%;
+  }
+
+  .block-ellipsis {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.6;
+    margin: 0 auto;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .pointer-none {
+    cursor: initial !important;
+    pointer-events: none !important;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .user-profile-details {
+    margin: unset;
+    margin-top: 10px;
+    min-width: unset;
+    h4 {
+      font-size: $font-size-md;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .user-profile-details {
+    margin-top: 0;
+  }
+}

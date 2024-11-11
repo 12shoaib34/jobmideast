@@ -1,0 +1,32 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import 'home';
+@import '../../layout/Layout';
+// @import "../../pages/index";
+@import '../../app-ui/index';
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: rgba($color: grey, $alpha: 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $blue;
+}

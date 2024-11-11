@@ -1,0 +1,135 @@
+@import "../../assets/scss/variables";
+.post-job-wrapper {
+  min-height: auto;
+  height: 100px;
+  width: 100%;
+
+  max-width: 1200px;
+  margin: 20px auto;
+  border-radius: 8px;
+  padding: 70px 0 10px 0;
+  position: relative;
+  box-shadow: 0 0 15px $shadow-color;
+
+  .expand-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 50;
+    height: max-content;
+    width: max-content;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .right {
+    transform: rotate(0deg);
+    // cursor: pointer;
+  }
+  .bottom {
+    // padding-right: 10px;
+    transform: rotate(90deg);
+    // right: 20px !important;
+  }
+  .clickable-div {
+    // display: none;
+    // background: red !important;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 350px);
+    z-index: 200;
+    cursor: pointer;
+  }
+
+  .form-header-image {
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    // background-image: linear-gradient(0deg, red, green);
+
+    // mask-image: linear-gradient(
+    //   to bottom,
+    //   rgba(8, 76, 140, 0) 0%,
+    //   rgba(7, 175, 63, 0.65) 100%
+    // );
+    // -webkit-mask-image: linear-gradient(
+    //   to bottom,
+    //   rgba(8, 76, 140, 0) 0%,
+    //   rgba(7, 175, 63, 0.65) 100%
+    // );
+  }
+
+  .form-title {
+    font-size: 20px;
+    z-index: 2;
+    position: absolute;
+    font-family: $font-medium;
+    left: 130px;
+    top: 20px;
+  }
+  .purple {
+    color: $light-purple;
+  }
+  .blue {
+    color: $blue;
+  }
+  .yellow {
+    color: #f1ab19;
+  }
+  .green {
+    color: $green;
+  }
+  .black {
+    color: black;
+  }
+
+  .c-switch .ant-form-item-control {
+    justify-content: flex-start !important;
+  }
+}
+
+// ----------COLLAPSED LOGIC-----------
+.collpased {
+  height: 100px;
+  // height: 100%;
+  // overflow-y: hidden;
+  transition: all ease 0.2s;
+  .form-rows {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.expand-form {
+  // height: 100%;
+  // min-height: fit-content;
+  // max-height: calc(1600px);
+  height: fit-content;
+
+  // height: 800px;
+  transition: all ease 0.2;
+  .form-rows {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+// -----------------------------------
+
+.shadow-purple {
+  box-shadow: 0 0 20px #cc67ba6b;
+}
+
+.shadow-blue {
+  box-shadow: 0 0 20px #3a8fffb0;
+}
+
+.shadow-yellow {
+  box-shadow: 0 0 20px #f1ab1969;
+}
+
+.shadow-green {
+  box-shadow: 0 0 20px #59d4248c;
+}

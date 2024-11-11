@@ -1,0 +1,76 @@
+.company-card {
+  // margin: 0 10px 0 0;
+  // margin-top: 10px;
+  // flex: 1 0 auto;
+  // height: auto;
+  // border-radius: 15px;
+  // box-shadow: 0 0 25px #63636366;
+  // padding: 15px 0;
+  // max-width: 190px;
+
+  margin: 0 10px 0 0;
+  margin-top: 10px;
+  // flex: 1 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 0 25px $shadow-color;
+  padding: 1em;
+  width: 190px;
+  height: 200px;
+
+  img {
+    width: 70px;
+    box-shadow: 0 0 10px $shadow-color;
+    margin-bottom: 15px;
+  }
+
+  .company-name {
+    color: $secondary;
+    font-size: 12px;
+  }
+
+  .sector {
+    font-size: 11px !important;
+  }
+
+  .location {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    margin-top: 3px;
+    font-size: 10px !important;
+
+    img {
+      box-shadow: none;
+      height: 13px;
+      width: 13px;
+      margin-bottom: 0;
+    }
+  }
+
+  .company-name,
+  .location,
+  .sector {
+    margin: 0 0 5px 0px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .company-card {
+    padding: 10px;
+    min-height: 130px;
+    min-width: 130px;
+    max-width: 140px;
+    max-height: 140px;
+    margin: 5px 5px;
+    img {
+      width: 45px;
+      margin-bottom: 14px;
+    }
+    .company-name,
+    .location,
+    .sector {
+      margin: 0 0 5px 0px;
+      font-size: 10px !important;
+    }
+  }
+}

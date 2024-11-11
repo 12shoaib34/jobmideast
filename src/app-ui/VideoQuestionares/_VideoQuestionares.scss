@@ -1,0 +1,178 @@
+.video-questionare-main {
+  overflow: hidden;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+
+  .head {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    background: $blue;
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+
+    h1 {
+      color: $white;
+      margin: 0;
+    }
+  }
+
+  // select options css
+  .options-wrapper {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+
+    p {
+      font-size: $font-size-md;
+      line-height: 25px;
+      margin: 0 0 40px 0;
+      color: $text-color;
+      text-align: center;
+    }
+
+    .select-options {
+      height: max-content;
+      width: max-content;
+      display: flex;
+
+      .options {
+        height: 90px;
+        width: 90px;
+        background-color: $blue;
+        margin: 0 10px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 50px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // option type text css
+
+  .text-option-wrapper {
+    padding: 20px;
+
+    .buttons-secs {
+      margin: 30px 0 0 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  // audio type css
+  .audio-option-wrapper {
+    text-align: center;
+
+    p {
+      color: $text-color;
+    }
+
+    .instruction {
+      font-family: $font-subtitle !important;
+    }
+
+    // recorder body
+
+    ._1ceqH {
+      ._dt3-T {
+        min-height: 360px;
+        background: #fff;
+        // color: #2d2f44;
+        position: relative;
+      }
+      ._1lB9c ._2N9dq {
+        font-weight: 400;
+        color: $text-color;
+        font-size: $font-size-md !important;
+        font-family: $font-subtitle !important;
+      }
+
+      // recorder header
+
+      ._1lB9c {
+        color: $text-color;
+        display: flex;
+        background: transparent;
+        justify-content: center;
+        padding: 0;
+        ._3-aC9 {
+          display: none !important;
+        }
+      }
+      // clear and start recording css
+
+      ._1Yplu {
+        ._1Pz2d {
+          border: 0;
+          outline: 0;
+          padding: 4px 20px;
+          border-radius: 20px;
+          background: $blue;
+          color: $white;
+        }
+      }
+      // timer text css
+
+      ._f2DT8 * {
+        color: $text-color;
+        font-size: 60px;
+      }
+      ._1YOWG {
+        ._eV_dK {
+          color: $text-color;
+        }
+      }
+
+      // recording btn
+
+      ._1dpop {
+        background: $blue;
+        bottom: 0;
+        right: auto;
+
+        &:hover {
+          ._3wi1g {
+            fill: #fff;
+          }
+        }
+      }
+
+      // stop start btns
+      ._qxztz {
+        ._1bSom,
+        ._3nQu5 {
+          background: $blue;
+          position: relative;
+        }
+      }
+    }
+  }
+  .video-option-wrapper {
+    text-align: center;
+    padding: 20px;
+
+    .file-picker {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .share-btns {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0 0 0;
+    }
+  }
+}

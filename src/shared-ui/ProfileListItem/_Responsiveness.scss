@@ -1,0 +1,16 @@
+@media screen and (max-width: 540px) {
+  .profile-list-item {
+    justify-content: flex-start;
+    .profile-item-btns {
+      margin-left: auto;
+    }
+    .profile-text {
+      flex-grow: 1;
+      max-width: 500px;
+      width: 50%;
+      .text {
+        width: 100% !important;
+      }
+    }
+  }
+}

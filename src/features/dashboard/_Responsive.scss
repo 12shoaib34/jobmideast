@@ -1,0 +1,412 @@
+@import "../../assets/scss/variables";
+
+@media screen and (max-width: 767px) {
+  .dashboard-tab {
+    padding: 10px;
+    .dashboard-wrapper {
+      display: unset;
+      .profile-section {
+        padding: 0px;
+        padding-top: 0;
+
+        .profile-wrapper {
+          padding: 0px;
+          flex-grow: 1;
+          max-height: 500px;
+          margin: 0 0 20px 0;
+
+          h1 {
+            font-size: $font-size-md;
+          }
+        }
+      }
+      .task-counts-section {
+        padding: 0;
+        margin: 0 0 20px 0;
+        max-width: unset;
+        .statistic-cards {
+          padding: 0;
+          margin: 0 0 20px 0;
+          .card-row-wrapper {
+            .card-row {
+              padding: 0;
+              display: flex;
+              width: 100%;
+            }
+          }
+          .ant-divider {
+            margin: 0;
+          }
+        }
+      }
+      .task-counts-section {
+        .task-list-section {
+          height: 400px;
+          overflow-y: auto;
+          padding: 10px 0;
+
+          .custom-tag {
+            min-width: 80px;
+            width: 90px;
+          }
+        }
+
+        .c-date-picker {
+          .ant-picker-header-view {
+            line-height: 21px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .table-wrapper {
+      margin: 0 0 20px 0;
+
+      .M-X {
+        margin: 0 !important;
+      }
+
+      .team-table {
+        .DragCsss {
+          width: calc(100vw - 30px) !important;
+        }
+        .dash-table {
+          .table-head {
+            .table-cell {
+              padding: 4px 10px;
+
+              .table-user-name {
+                margin: 0px 0 0 48px;
+              }
+            }
+          }
+          .table-row {
+            .table-cell {
+              padding: 4px 10px;
+              .user-image {
+                height: 40px;
+                width: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+              .user-name {
+                font-size: $font-size-md;
+                margin: 0 0 0 8px;
+              }
+            }
+          }
+        }
+        .table-footer {
+          padding: 10px;
+          border-radius: unset;
+
+          .search-team-member {
+            padding: 10px 0;
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+
+            .c-button {
+              margin: 10px 10px;
+            }
+            .ant-form-item {
+              padding: 10px 10px;
+            }
+            .c-input {
+              flex-direction: column;
+              align-items: baseline;
+              width: 100%;
+              max-width: unset;
+              min-width: unset;
+            }
+            .ant-col.ant-form-item-control {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dashboard-tab .other-branch-wrapper {
+    margin: 0 0 20px 0;
+
+    padding: 10px;
+
+    .tab-title {
+      font-size: $font-size-md;
+      font-family: $font-subtitle;
+      color: #171c3c;
+      margin: 0 0 20px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+  .dashboard-tab {
+    padding: 0 15px;
+    .dashboard-wrapper {
+      display: unset;
+      .task-counts-section {
+        padding: 20px 0 0 0;
+        flex-direction: unset;
+        max-width: unset;
+        .statistic-cards {
+          margin: 0 15px 0 0;
+          width: 50%;
+          height: 380px;
+          flex: auto;
+          padding: 0;
+          .card-row-wrapper {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .card-row {
+              width: 100%;
+              // height: 50%;
+            }
+          }
+          .title {
+            padding: 25px 10px 10px 10px;
+          }
+          .statistic-card {
+            padding-bottom: 30%;
+            span {
+              position: absolute;
+              top: 0;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+        .task-list-section {
+          padding: 10px;
+          width: 50%;
+          height: 380px;
+
+          // min-height: 352px;
+          max-height: 490px;
+        }
+      }
+      .profile-section {
+        padding: 20px 0;
+      }
+    }
+    .table-wrapper {
+      .team-table {
+        .table-footer {
+          .search-team-member {
+            .c-button {
+              padding: 4px 25px;
+            }
+            .ant-form-item {
+              padding: 0 10px;
+              flex-direction: column;
+              align-items: baseline;
+              width: 100% !important;
+            }
+            .ant-form-item-control {
+              margin: 3px 0px;
+              width: 100%;
+            }
+            .c-input input.ant-input-lg {
+              width: 100% !important;
+            }
+          }
+          .c-input input.ant-input-w100 {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .dashboard-tab {
+    .dashboard-wrapper {
+      .task-counts-section {
+        .statistic-cards {
+          margin: 0 15px 0 0;
+          width: 50%;
+          height: auto;
+          flex: auto;
+        }
+        .task-list-section {
+          padding: 10px 0;
+          width: 50%;
+          height: auto;
+          max-height: 350px;
+          min-height: 350px;
+        }
+      }
+      .table-wrapper {
+        .dash-table {
+          .table-head {
+            .table-cell {
+              .c-input {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .table-wrapper {
+    .team-table {
+      .DragCsss {
+        width: calc(100vw - 30px) !important;
+      }
+    }
+  }
+  .dashboard-tab
+    .dashboard-wrapper
+    .task-counts-section
+    .statistic-cards
+    .ant-divider {
+    margin: 0px 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .dashboard-tab
+    .dashboard-wrapper
+    .task-counts-section
+    .statistic-cards
+    .title {
+    padding: 10px 20px;
+  }
+  .notifications-count {
+    right: -10px !important;
+  }
+  .res-w-100 {
+    width: 100%;
+  }
+  .dashboard-tab .table-wrapper .team-table .dash-table {
+    min-height: 300px;
+  }
+  .table-wrapper {
+    .team-table {
+      .table-footer {
+        .search-team-member {
+          .c-button {
+            height: 28px !important;
+            padding: 0 30px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .dashboard-tab {
+    .dashboard-wrapper {
+      .task-counts-section {
+        .statistic-cards {
+          .title {
+            padding: 25px 10px 0 10px;
+          }
+        }
+        .task-list-section {
+          padding: 10px;
+          width: 50%;
+          height: 450px;
+          max-height: 510px;
+        }
+        .statistic-cards {
+          margin: 0 15px 0 0;
+          width: 50%;
+          height: 450px;
+          flex: auto;
+          padding: 0;
+        }
+      }
+      .table-wrapper {
+        .team-table {
+          .dash-table {
+            .table-head {
+              .table-cell {
+                .c-input {
+                  width: 100% !important;
+                  max-width: 100% !important;
+                  min-width: 100% !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1400px) {
+  .dashboard-tab {
+    padding: 0 20px;
+    padding-right: 20px;
+    .dashboard-wrapper {
+      .task-counts-section {
+        padding: 40px 15px;
+      }
+      .profile-section {
+        .profile-wrapper {
+          padding: 0px 20px;
+          padding-right: 20px;
+        }
+      }
+      .task-counts-section {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 1024px) {
+  .job-filter-container .c-button {
+    min-width: 62px;
+    padding: 4px 0;
+  }
+  .dashboard-tab {
+    .table-wrapper {
+      .team-table {
+        .DragCsss {
+          width: calc(100vw - 30px) !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1281px) and (max-width: 1400px) {
+  .dashboard-tab {
+    .dashboard-wrapper {
+      .profile-section {
+        .profile-wrapper {
+          padding: 0px 0px;
+          padding-right: 0px;
+        }
+      }
+    }
+    .table-wrapper {
+      .team-table {
+        .DragCsss {
+          width: calc(100vw - 200px) !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .team-table {
+    .draggable {
+      width: calc(100vw - 30px) !important;
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@import "../../assets/scss/variables";
+
+.make-premium-container {
+  padding: 0 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  .make-premium {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 220px 0 0;
+
+    .heading-section {
+      width: 100%;
+
+      h1 {
+        font-size: 35px;
+        line-height: 1.4;
+
+        span {
+          color: $blue;
+          position: relative;
+          font-size: 35px;
+          text-transform: uppercase;
+
+          img {
+            position: absolute;
+            top: -86px;
+            left: -56px;
+          }
+        }
+      }
+    }
+    .options-premium {
+      padding: 100px 0 0 0;
+
+      h1 {
+        font-family: $font-subtitle;
+      }
+
+      p {
+        font-size: 12px;
+        margin: 0;
+      }
+    }
+
+    .post > span {
+      margin: 0 0 10px 0;
+      display: flex;
+      align-items: flex-end;
+
+      p {
+        margin: 0;
+        font-size: 12px;
+        margin: 0 0 0 10px;
+      }
+    }
+
+    .post {
+      padding: 50px 0 0 0;
+
+      .ant-form-vertical .ant-form-item {
+        flex-direction: row-reverse !important;
+        justify-content: flex-end;
+        align-items: baseline;
+      }
+      .make-premium-check {
+        .ant-col.ant-form-item-label {
+          padding: 0;
+        }
+
+        .ant-form-vertical .ant-form-item {
+          flex-direction: row-reverse;
+          justify-content: flex-end;
+        }
+        .ant-form-item-control {
+          flex-grow: unset;
+        }
+        .ant-form-item-control-input {
+          min-height: unset;
+          margin: 0 5px 0 0;
+        }
+      }
+      .c-button {
+        padding: 6px 0;
+        width: 120px;
+      }
+    }
+
+    .skip-btn {
+      margin: 50px 0 0 0;
+
+      background: transparent;
+      border: solid 1px #707070;
+      padding: 6px 0;
+      width: 120px;
+
+      span {
+        color: #707070;
+      }
+    }
+  }
+  .make-premium-video {
+    padding: 0 0 0 100px;
+    flex: 1 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-height: 700px;
+
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+      // min-height: 600px;
+      // min-width: 400px;
+      // max-width: 500px;
+      // max-height: 700px;
+      // background-color: red;
+
+      .aspect-ratio {
+        // position: absolute;
+        // height: 100%;
+        // width: 100%;
+        // min-width: 400px;
+        // max-width: 600px;
+        // min-height: 550px;
+        // max-height: 600px;
+        // top: 0;
+        // left: 0;
+        // display: flex;
+        // justify-content: flex-end;
+        // position: absolute;
+        height: 100%;
+        width: 100%;
+        /* min-width: 400px; */
+        /* max-width: 600px; */
+        /* min-height: 550px; */
+        /* max-height: 600px; */
+        /* top: 0; */
+        /* left: 0; */
+        display: flex;
+        justify-content: flex-end;
+
+        video {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

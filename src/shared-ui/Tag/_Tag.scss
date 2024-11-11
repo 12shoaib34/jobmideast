@@ -1,0 +1,28 @@
+// Custom Tag Style
+
+.custom-tag {
+  border-radius: 100px !important;
+  min-width: 90px;
+  color: white !important;
+  background: $brown;
+  cursor: pointer !important;
+  text-align: center;
+  width: 70px;
+  font-size: $font-size-x-sm;
+  margin: 0;
+  border: none !important;
+
+  //  Types of tags
+  &.completed {
+    background-color: $green;
+  }
+  &.due {
+    background-color: $grey;
+  }
+  &.due-today {
+    background-color: $primary;
+  }
+  &.save {
+    background: $blue;
+  }
+}

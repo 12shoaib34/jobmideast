@@ -1,0 +1,61 @@
+@import "../../assets/scss/variables";
+
+.image-crop-wrapper {
+  .ant-upload.ant-upload-select-picture-card {
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    padding-bottom: 15%;
+    position: relative;
+    height: auto;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    vertical-align: top;
+    background-color: #fafafa;
+    border: none;
+    box-shadow: 0 0 10px $shadow-color;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    overflow: hidden;
+    .ant-upload {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .ant-upload-list-picture-card .ant-upload-list-item-error {
+    padding: 0;
+    border: none;
+  }
+  .ant-upload-list-picture-card-container {
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    box-shadow: 0 0 10px $shadow-color;
+    padding-bottom: 15%;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin: 0 8px 8px 0;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .ant-upload-list-item.ant-upload-list-item-undefined.ant-upload-list-item-list-type-picture-card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    inset: 0;
+    padding: 0;
+  }
+  .ant-upload-list-picture-card .ant-upload-list-item-thumbnail img {
+    object-fit: cover;
+  }
+  .ant-tooltip {
+    display: none;
+  }
+}

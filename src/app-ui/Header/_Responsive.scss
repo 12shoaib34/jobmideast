@@ -1,0 +1,147 @@
+@media screen and (max-width: 1024px) {
+  .c-header {
+    z-index: 99;
+    .close-icon {
+      transition: 0.5s ease;
+      animation: mymove both 0.3s ease;
+      transform: rotate(95deg);
+    }
+
+    .menu-icon {
+      transition: 0.5s ease;
+      animation: menuMove both 0.5s ease;
+    }
+
+    @keyframes menuMove {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes mymove {
+      from {
+        transform: rotate(95deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+
+    nav a.login {
+      display: none;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      left: 0;
+      top: 64px;
+      background-color: $white;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: 0.3s ease;
+      overflow-y: auto;
+      z-index: 998 !important;
+
+      a {
+        margin: 0 0 0 50px;
+        list-style: none;
+        font-family: $font-bold;
+        color: $text-color;
+        font-size: 24px;
+        padding: 15px 0;
+      }
+    }
+
+    .menu-open {
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .links-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 550px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+    .logo {
+      margin-left: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .c-header {
+    .inner-container {
+      padding: 0 10px;
+      justify-content: center !important;
+      .go-premium {
+        display: none;
+      }
+      a {
+        img {
+          margin-left: 0;
+        }
+      }
+      nav {
+        position: absolute;
+        right: 4px;
+      }
+    }
+
+    .logo {
+      max-width: 200px;
+      width: 100%;
+    }
+
+    .mobile-menu a {
+      margin: 0 0 0 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .c-header {
+    .toggle-button {
+      display: none;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .c-header {
+    position: sticky;
+    top: 0px;
+    height: 60px;
+    z-index: 998;
+    .inner-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px;
+      height: 64px;
+      background-color: $white;
+    }
+  }
+}

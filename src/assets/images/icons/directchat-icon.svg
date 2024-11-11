@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64.605" height="40.001" viewBox="0 0 64.605 40.001">
+  <defs>
+    <filter id="Union_17" x="0" y="0" width="51.605" height="32.667" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Union_18" x="13" y="7.333" width="51.605" height="32.667" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.349"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_7099" data-name="Group 7099" transform="translate(-390 -243)">
+    <g id="Group_7097" data-name="Group 7097">
+      <g id="Group_7093" data-name="Group 7093" transform="translate(39.719 61.001)">
+        <g transform="matrix(1, 0, 0, 1, 350.28, 182)" filter="url(#Union_17)">
+          <path id="Union_17-2" data-name="Union 17" d="M7.488,11.847H5.923A5.923,5.923,0,0,1,5.923,0H27.681a5.923,5.923,0,1,1,0,11.847H10.532L9.01,14.667Z" transform="translate(9 9)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 390, 243)" filter="url(#Union_18)">
+      <path id="Union_18-2" data-name="Union 18" d="M7.488,11.847H6.923A5.923,5.923,0,0,1,6.923,0H28.682a5.923,5.923,0,0,1,0,11.847H10.532L9.01,14.667Z" transform="translate(21 16.33)" fill="#5271FF"/>
+    </g>
+    <g id="Group_7096" data-name="Group 7096" transform="translate(2)">
+      <circle id="Ellipse_309" data-name="Ellipse 309" cx="1.5" cy="1.5" r="1.5" transform="translate(420 264)" fill="#fff"/>
+      <circle id="Ellipse_310" data-name="Ellipse 310" cx="1.5" cy="1.5" r="1.5" transform="translate(425 264)" fill="#fff"/>
+      <circle id="Ellipse_311" data-name="Ellipse 311" cx="1.5" cy="1.5" r="1.5" transform="translate(430 264)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

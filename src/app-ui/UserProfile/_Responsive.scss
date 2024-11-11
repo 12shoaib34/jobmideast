@@ -1,0 +1,312 @@
+@media screen and (min-width: 1281px) and (max-width: 1440px) {
+  .profile-search-page
+    .profile-wrapper
+    .user-handler
+    .profile-head
+    .view-or-add-list {
+    justify-content: flex-start;
+    padding: 0;
+    margin-left: 210px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .user-profile-wrapper {
+    .hide-perofile-header {
+      .profile-option {
+        display: block;
+      }
+    }
+    .profile-section {
+      .profile-options {
+        width: 355px;
+        height: 100%;
+        position: absolute;
+        z-index: 11;
+        background: #fff;
+        right: 0;
+        transform: translateX(220%);
+        transition: 0.3s ease;
+        border-radius: 0 14px 14px 0;
+
+        .tabs-main {
+          width: 355px;
+          .tab-section {
+            padding: 15px 10px;
+            .add-notes {
+              margin-top: -10px;
+            }
+          }
+        }
+      }
+      .profile-option-show {
+        transform: translateX(0);
+      }
+      .cv-container {
+        padding: 0;
+      }
+    }
+    .profile-option {
+      display: block;
+    }
+  }
+  .additionalInfo-menu {
+    left: 177px !important;
+    top: 194px !important;
+    width: 300px;
+    max-width: 400px;
+
+    // .additionalInfo-menu > .ant-dropdown-menu {
+    //   padding: 10px 0;
+    //   border-radius: 16px;
+    //   width: 100%;
+    //   max-width: 370px;
+    //   max-height: 500px;
+    //   overflow-y: auto;
+    // }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .user-profile-hide {
+    overflow: hidden;
+  }
+
+  .user-profile-wrapper {
+    height: calc(100vh - 30px) !important;
+
+    .hide-perofile-header {
+      .profile-option {
+        display: block;
+      }
+    }
+    .profile-section {
+      padding: 0;
+      overflow-y: hidden;
+
+      .cv-container {
+        overflow-y: auto;
+        padding: 0 0;
+        height: calc(100vh - 30px) !important;
+
+        .profile-header {
+          padding: 90px 0 0 0;
+          // flex-wrap: wrap;
+          justify-content: center;
+
+          .tag {
+            right: 0;
+            height: 160px;
+            width: 130px;
+          }
+
+          .user-option {
+            padding: 10px 10;
+            .option {
+              display: unset;
+              .w-100 {
+                // margin-top: 10px;
+              }
+            }
+          }
+          .profile-video-section {
+            height: 140px;
+            width: 140px;
+            margin: 0 20px;
+            margin-left: 0;
+            border-radius: 8px;
+          }
+        }
+      }
+      .profile-options {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 11;
+        background: #fff;
+        right: 0;
+        transform: translateX(150%);
+        opacity: 0;
+        transition: 0.3s ease;
+        border-radius: 16px;
+        inset: 0;
+        top: -1px;
+
+        border-left: none !important;
+        .tabs-main {
+          width: 100%;
+        }
+        .buttons {
+          &:first-child {
+            border-radius: 16px 0 0 0 !important;
+          }
+          &:last-child {
+            border-radius: 0 16px 0 0 !important;
+          }
+        }
+      }
+
+      .profile-option-show {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      .tabs-main {
+        .buttons-section {
+          width: 100%;
+          display: flex;
+          min-width: 100%;
+          height: 60px;
+        }
+      }
+    }
+    .profile-option {
+      display: block;
+    }
+  }
+  .profile-modal {
+    .modal-dialog {
+      height: 100%;
+      .modal-content {
+        padding: 10px !important;
+        padding-top: 0 !important;
+        padding-right: 10px !important;
+      }
+    }
+  }
+  .additionalInfo-menu {
+    left: 255px !important;
+    top: 255px !important;
+    width: 237px;
+  }
+
+  .connect-modal {
+    .modal-content {
+      min-width: 90% !important;
+      border-radius: 8px !important;
+      .btn-row {
+        justify-content: space-around !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .additionalInfo-menu {
+    left: 0px !important;
+    top: 430px !important;
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .user-profile-wrapper
+    .profile-section
+    .profile-options
+    .tabs-main
+    .buttons-section {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    min-width: unset;
+    height: 60px;
+    background: $blue;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0px;
+  }
+  .profile-modal .modal-dialog .modal-content .close {
+    top: 6px !important;
+    right: 6px !important;
+  }
+  .user-profile-wrapper {
+    .profile-section {
+      .cv-container {
+        .profile-header {
+          padding: 16px 0 0 0;
+          .user-option {
+            padding: 0px 10px;
+            .option {
+              margin: 0px;
+              span {
+                .rounded-outlined {
+                  height: 22px;
+                  width: 22px;
+                }
+                .icon-btn {
+                  height: 20px;
+                }
+                span {
+                  .ml-2 {
+                    width: 35px !important;
+                  }
+                }
+              }
+            }
+          }
+          .profile-video-section {
+            height: 140px;
+            width: 140px;
+            margin: 0 0px;
+            margin-left: 0;
+            position: relative;
+            min-width: 140px;
+            .tag {
+              position: absolute;
+              top: 100px;
+              transform: rotate(180deg);
+              object-fit: unset;
+              left: 8px;
+              width: 55px !important;
+              height: 60px !important;
+            }
+          }
+        }
+        .only540 {
+          display: flex;
+          margin-top: 5px;
+          button {
+            margin-top: 10px;
+            border-radius: 4px;
+            padding: 0px 50px;
+          }
+        }
+      }
+    }
+  }
+  .additionalInfo-menu > .ant-dropdown-menu {
+    top: -269px;
+  }
+}
+
+
+@media only screen and (max-width: 360px) {
+  .only540 {
+    display: flex;
+    margin-top: 5px;
+    button {
+      margin-top: 10px;
+      border-radius: 4px;
+      padding: 0px 40px !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .user-profile-wrapper
+    .profile-section
+    .cv-container
+    .profile-header
+    .profile-video-section {
+    height: 140px;
+    width: 140px;
+    margin: 0;
+    margin-left: 0;
+  }
+  .only540 {
+    button {
+      padding: 0px 35px !important;
+    }
+    .profile-option {
+      padding: 0px 50px !important;
+
+    }
+  }
+}

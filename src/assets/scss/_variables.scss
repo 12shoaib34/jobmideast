@@ -1,0 +1,48 @@
+$primary: #5271ff;
+$secondary: #171c3c;
+$shadow-color: #d4d4d4;
+$white: #ffffff;
+$darkPink: #e53262;
+$black: #000000;
+$text-color: #2d2f44;
+$blue: #5271ff;
+$green: #59d424;
+$purple: #6c5984;
+$light-purple: #cb6ce6;
+$brown: #f8b041;
+$grey: #808080;
+$border-gray: #f4f4f4;
+$light-grey: #d6d6d6;
+$border-color: #d5d5d5;
+$card-radius: 15px;
+$theme-border: solid 1px
+  rgba(
+    $color: $primary,
+    $alpha: 0.2,
+  );
+$theme-shadow: 0 0 0 1px
+  rgba(
+    $color: $primary,
+    $alpha: 1,
+  );
+$border-light: solid 1px
+  rgba(
+    $color: $text-color,
+    $alpha: 0.3,
+  );
+
+//font families
+$font-bold: 'Gordita-Bold';
+$font-light: 'Gordita-Light';
+$font-medium: 'Gordita-Regular';
+$font-subtitle: 'Gordita-Medium';
+
+//font-sizes
+$font-size-x-lg: 40px;
+$font-size-30: 25px;
+$font-size-lg: 16px;
+$font-size-18: 18px;
+$font-size-md: 14px;
+$font-size-sm: 12px;
+$font-size-x-sm: 10px;
+$font-size-md-sm: 11px;

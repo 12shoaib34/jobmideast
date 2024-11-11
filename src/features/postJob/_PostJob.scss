@@ -1,0 +1,291 @@
+@import "../../assets/scss/variables";
+.post-job-main {
+  min-height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 14px;
+  padding-top: 24px;
+  .back-btn {
+    margin-top: 10px;
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  }
+  .form-content {
+    padding-top: 60px !important;
+  }
+  .form-rows {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    .silde-label {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+    .add-section {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 0 6px 0;
+      label {
+        margin: 0;
+      }
+    }
+    .input-guide {
+      font-size: smaller;
+      margin-left: 1em;
+      color: grey;
+    }
+    // .select-lg {
+    //   z-index: 1000;
+    // }
+    .ant-form-item-control-input-content {
+      .c-button {
+        background-color: rgba($color: black, $alpha: 0.6);
+        &.rounded {
+          width: 26px;
+          height: 26px;
+          span {
+            font-size: 16px;
+          }
+        }
+        &.minus {
+          span {
+            position: relative;
+            top: -1px;
+          }
+        }
+      }
+    }
+    .c-button {
+      &.light {
+        padding: 9px 32px;
+      }
+    }
+    textarea {
+      box-shadow: 1px 1px 10px $shadow-color !important;
+      // border: solid 1px rgba($color: $primary, $alpha: 0.3);
+      border: none !important;
+      border-radius: 10px !important;
+      padding: 1em !important;
+      font-size: $font-size-sm;
+    }
+    .ant-row {
+      padding-bottom: 20px !important;
+    }
+    .other-benefits-select {
+      .ant-select {
+        width: 100% !important;
+      }
+    }
+    .c-input {
+      width: 100% !important;
+      max-width: unset !important;
+    }
+    .ant-select {
+      width: 100% !important;
+      max-width: unset !important;
+    }
+    .c-date-picker .ant-picker {
+      width: 100% !important;
+      max-width: unset !important;
+    }
+    .c-button {
+      &.light {
+        padding: 9px 32px;
+      }
+    }
+  }
+  // *********************************************
+  .drop-down-right {
+    position: absolute;
+    top: 16px;
+    right: 50px;
+    // z-index: 1000 !important;
+    width: fit-content;
+    .ant-form-item-label {
+      padding: 0;
+    }
+  }
+  // *********************************************
+  .flex-end {
+    justify-content: flex-end;
+    button {
+      // display: none;
+      margin-top: 50px;
+    }
+  }
+  .switch-section {
+    margin: 2em 0;
+    width: 100%;
+    max-width: 760px;
+    .switch-wrapper {
+      display: flex;
+      .btns {
+        width: 100%;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        .ant-form-item {
+          margin: 0 0 0px 0;
+          .ant-switch {
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+  .post-btns {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    .c-button {
+      padding: 8px 48px;
+      margin: 0 10px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .drop-down-custom-class {
+    .ant-select-dropdown {
+      .rc-virtual-list {
+        .rc-virtual-list-holder {
+          .rc-virtual-list-holder-inner {
+            .ant-select-item-option-selected {
+              background: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .template-btns {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: auto;
+    margin-bottom: 18px;
+    // background-color: red;
+    .c-button {
+      padding: 6px 30px !important;
+      margin: 0 10px;
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .ant-select-selection-overflow-item {
+    .ant-select-selection-search {
+      .ant-select-selection-search-input {
+        width: 100% !important;
+        height: 28px !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+  // .custom-dropdown-1 {
+  //   z-index: 1;
+  //   // background-color: red;
+  //   padding: 0;
+  //   padding-top: 34px;
+  //   border-radius: 16px;
+  // }
+  // .custom-dropdown-2 {
+  //   z-index: 1;
+  //   // background-color: red;
+  //   padding: 0;
+  //   padding-top: 34px;
+  //   border-radius: 16px;
+  // }
+  // .custom-dropdown-3 {
+  //   z-index: 1;
+  //   // background-color: red;
+  //   padding: 0;
+  //   padding-top: 34px;
+  //   border-radius: 16px;
+  // }
+  // .custom-dropdown-4 {
+  //   z-index: 1;
+  //   // background-color: red;
+  //   padding: 0;
+  //   padding-top: 34px;
+  //   border-radius: 16px;
+  // }
+  // text editor
+  .ck.ck-reset.ck-editor.ck-rounded-corners {
+    width: 100%;
+    box-shadow: 0 0 10px $shadow-color;
+    border-radius: 16px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .ck.ck-reset,
+  .ck.ck-reset_all,
+  .ck.ck-reset_all * {
+    border: 0 !important;
+  }
+  .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+    border-color: var(--ck-color-base-border);
+    border: 0;
+  }
+  .ck-blurred {
+    border-top: 1px solid rgb(194, 194, 194) !important;
+    border-radius: 0 0 20px 20px !important;
+  }
+  .ck-focused {
+    border: none !important;
+    border-top: 1px solid rgb(194, 194, 194) !important;
+    border-radius: 0 0 20px 20px !important;
+    box-shadow: none !important;
+  }
+}
+.premium-feature-hide {
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.3s;
+  height: 100%;
+  background-color: $white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+.premium-show {
+  transform: translateX(0);
+}
+.ant-form-item-with-help {
+  max-height: 100px;
+  &.ant-row {
+    display: unset;
+  }
+}
+// Global customized stylling
+@media screen and (max-width: 540px) {
+  .ant-form-vertical .ant-form-item {
+    flex-direction: row !important;
+  }
+}
+
+.checking-ck {
+  .ant-form-item-control {
+    .ant-form-item-control-input {
+      .ant-form-item-control-input-content {
+        .ck {
+          .ck-editor__main {
+            .ck-editor__editable > * {
+              font-size: inherit;
+              font-family: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

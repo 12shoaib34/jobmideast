@@ -1,0 +1,186 @@
+@import "../../assets/scss/variables";
+
+@media screen and (max-width: 540px) {
+  .make-premium-container {
+    flex-direction: column;
+    padding: 100px 10px 0 10px;
+
+    .make-premium {
+      padding: 0;
+      text-align: center;
+      .options-premium {
+        padding: 20px 0 0 0;
+      }
+
+      .post {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .ant-form-vertical .ant-form-item {
+          flex-wrap: nowrap;
+        }
+
+        .ant-form .ant-form-item .ant-form-item-label,
+        .ant-form .ant-form-item .ant-form-item-control {
+          flex: unset;
+          max-width: unset;
+        }
+      }
+
+      .skip-btn {
+        margin: 20px auto;
+        background: transparent;
+        border: solid 1px #707070;
+        padding: 6px 0;
+        width: 120px;
+      }
+    }
+
+    .make-premium-video {
+      padding: 0 0 0 0;
+      width: 100%;
+
+      .video-section {
+        min-height: 500px;
+      }
+
+      .video-section .aspect-ratio {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        max-height: 100%;
+
+        video {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .make-premium-container {
+    min-width: 50%;
+    padding: 100px 20px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+
+    .make-premium {
+      padding: 80px 0 0;
+      max-height: fit-content;
+      .heading-section h1 {
+        font-size: 25px;
+        line-height: 1.4;
+
+        span {
+          color: $blue;
+          position: relative;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+      }
+      .options-premium {
+        padding: 40px 0 0 0;
+      }
+    }
+    .make-premium-video {
+      min-width: 50%;
+      padding: 0 0 0 0;
+      flex: 1 1;
+      height: fit-content;
+      min-height: fit-content;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .video-section {
+        min-width: 100%;
+        position: relative;
+        width: 100%;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        min-height: 550px;
+
+        .aspect-ratio {
+          min-width: 100%;
+        }
+
+        video {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1280px) {
+  .make-premium-container {
+    min-width: 50%;
+    padding: 100px 20px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+
+    .make-premium {
+      max-height: fit-content;
+      .heading-section h1 {
+        font-size: 25px;
+        line-height: 1.4;
+
+        span {
+          color: $blue;
+          position: relative;
+          font-size: 25px;
+          text-transform: uppercase;
+        }
+      }
+      .options-premium {
+        padding: 40px 0 0 0;
+      }
+    }
+    .make-premium-video {
+      min-width: 50%;
+      padding: 0 0 0 0;
+      flex: 1 1;
+      height: fit-content;
+      min-height: fit-content;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .video-section {
+        min-width: 100%;
+        position: relative;
+        width: 100%;
+        padding-bottom: 0;
+        box-sizing: border-box;
+        min-height: 550px;
+
+        .aspect-ratio {
+          min-width: 100%;
+        }
+
+        video {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
+  .make-premium-container {
+    .make-premium {
+      flex: 1 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 160px 0 0;
+    }
+  }
+}

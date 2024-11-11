@@ -1,0 +1,131 @@
+.interview-card{
+    // background-image: linear-gradient( #6AD259, #00B0FA);
+    background: transparent linear-gradient(-135deg, #6AD259 0%, #00B0FA 100%) 0% 0% no-repeat padding-box;
+    height: fit-content;
+    display: flex;
+    color: $white;
+    padding: 0.5em;
+    border-radius: 13px;
+    width: 100%;
+    max-width: 1200px;
+    
+
+    .card-left{
+        
+        flex-basis: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title{
+            font-family: $font-subtitle;
+            font-size: $font-size-md;
+        }
+        .subtitle{
+            font-family: $font-medium;
+            font-size: $font-size-x-sm;
+        }
+        .white{
+            
+            background: $white !important;
+
+            span{
+                color: $green;
+            }
+            &.accept{
+
+                span{
+                    color: $green;
+                }
+                
+            }
+            &.reject{
+
+                span{
+                    color: $primary;
+                }
+                
+            }
+        }
+        .accepted{
+
+            display: flex;
+            align-items: stretch;
+            height: 100%;
+
+            img{
+                width:40px;
+                align-self: flex-start;
+            }
+            
+            
+
+            .left-text{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin: 0 0 0 0.5em;
+
+            .title{
+                font-size: $font-size-md;
+                font-family: $font-subtitle;
+            }
+            .subtitle{
+                font-size: $font-size-x-sm;
+            }
+            .sub-subtitle{
+                
+                font-size: $font-size-x-sm;
+
+                a {
+                    font-size: $font-size-x-sm;
+                }
+            }
+        }
+
+    }
+    }
+
+    .card-right{
+        flex-basis: 65%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2em 0em 0.2em 0;
+
+        .column{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+            img{
+                width: 25px;
+                height: 25px;
+                object-fit: contain;
+                margin-bottom: 0.2em;
+
+            }
+            .title{
+                font-family: $font-subtitle;
+                font-size: $font-size-x-sm;
+                margin-bottom: 0.2em;
+            }
+            .sub-title{
+                font-size: $font-size-x-sm;
+            }
+
+            
+        }
+        .c-divider{
+            height: 85%;
+            border-left: 0.5px solid $white;
+            opacity: 0.5;
+        }
+    }
+    
+}

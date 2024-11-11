@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px) {
+  .c-job-card .tag-container .job-tag .tag-text {
+    display: none;
+  }
+  .c-job-card .tag-container .jobcard-checkbox-mobile {
+    display: unset !important;
+    justify-self: flex-start;
+    margin-right: auto;
+  }
+  .c-job-card .tag-container {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .c-job-detail-card {
+    .header {
+      top: 0;
+    }
+  }
+}

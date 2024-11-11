@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.943" height="29.943" viewBox="0 0 29.943 29.943">
+  <defs>
+    <filter id="Line_206" x="0" y="0" width="29.943" height="29.943" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_5927" data-name="Group 5927" transform="translate(14.971 -4.409) rotate(45)">
+    <g id="Group_4286" data-name="Group 4286" transform="translate(6.759 6.759)">
+      <line id="Line_205" data-name="Line 205" y2="13.89" transform="translate(6.945)" fill="none" stroke="#545454" stroke-linecap="round" stroke-width="1.5"/>
+      <g transform="matrix(0.71, -0.71, 0.71, 0.71, -14.23, 6.94)" filter="url(#Line_206)">
+        <line id="Line_206-2" data-name="Line 206" y2="13.89" transform="translate(19.88 19.88) rotate(135)" fill="none" stroke="#545454" stroke-linecap="round" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

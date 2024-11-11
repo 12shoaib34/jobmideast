@@ -1,0 +1,78 @@
+@import "../../assets/scss/variables";
+
+.support-chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .main-chat-wrapper {
+    display: flex;
+    justify-content: stretch;
+    height: 100%;
+    .user-profile {
+      .chat-header {
+        display: none;
+      }
+    }
+  }
+
+  .chat-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    .chat-header {
+      display: none;
+    }
+
+    .c-chat-input {
+      width: 100%;
+      padding: 0 1em;
+      position: absolute;
+      bottom: 0em;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      z-index: 20;
+    }
+    .blur-div {
+      width: 98%;
+      position: absolute;
+      bottom: 0;
+      height: 51px;
+      background: $white;
+      filter: blur(1px);
+      z-index: 10;
+      margin-left: auto;
+    }
+
+    .chat-inner {
+      // position: relative;
+      min-width: 500px;
+      padding: 1em;
+      height: 100%;
+      overflow-y: scroll;
+      flex-grow: 1;
+      padding-bottom: 5em;
+
+      .message {
+        position: relative;
+        width: 100%;
+        display: flex;
+
+        &.is-reciever {
+          justify-content: flex-start;
+        }
+        &.is-sender {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+  .user-profile {
+    width: 100%;
+    max-width: 500px;
+  }
+}

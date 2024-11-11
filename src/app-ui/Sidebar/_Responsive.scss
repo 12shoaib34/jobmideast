@@ -1,0 +1,131 @@
+@media screen and (max-width: 1024px) {
+  .shadow-sidebar {
+    background-color: rgba(0, 0, 0, 0.727);
+    position: absolute;
+    width: calc(100vw);
+    height: calc(100vh);
+    top: 0;
+    left: 0;
+    z-index: 998;
+  }
+  .c-sidebar {
+    width: 150px;
+    background: transparent
+      url("../../assets/images/sidebar/sidebar-background.svg") 0% 0% no-repeat
+      padding-box;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
+    position: fixed;
+    left: 0px;
+    top: 0px !important;
+    height: calc(100vh);
+    // overflow-y: auto;
+    // z-index: 998;
+    // transform: translateX(-100%);
+  }
+  .collapse-draggable {
+    position: absolute;
+    width: 0 !important;
+    height: calc(100vh);
+    bottom: 0;
+  }
+
+  .collapse-btn {
+    display: block;
+    position: absolute;
+    // background: $white;
+    background: transparent;
+    z-index: 110;
+    top: 14px;
+    transform: translateX(150px);
+    border: none;
+    transition: 0.3s ease;
+    border-radius: 0 0 0px 0;
+    // box-shadow: 1px 1px 15px rgba($color: #000000, $alpha: 0.3);
+    padding: 6px 8px;
+    .side-menu-open {
+      // color: #2d2f44;
+      animation: sideOpen both 0.5s;
+    }
+    .side-menu-close {
+      // color: #2d2f44;
+      animation: sideClose both 0.5s;
+      color: $white;
+    }
+
+    @keyframes sideOpen {
+      from {
+        transform: rotate(95deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+    @keyframes sideClose {
+      from {
+        transform: rotate(-45deg);
+      }
+      to {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .collapse-btn-animate {
+    transform: translateX(-2px);
+    transition: 0.3s ease;
+    left: 0;
+    z-index: 999 !important;
+  }
+  .collapse-btn-animate-translate {
+    // left: 150px;
+    // top: 0;
+    // z-index: 999 !important;
+    top: 0;
+    left: -36px;
+    z-index: 1000000000000000000;
+    background-color: transparent;
+  }
+
+  .c-sidebar-collapse {
+    position: fixed;
+    top: 0;
+    transform: translateX(-150px);
+    transition: 0.3s ease;
+  }
+
+  .c-sidebar-show {
+    transform: translateX(0px);
+    transition: 0.3s ease;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .collapse-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .employer-details-modal {
+    width: 100%;
+    .modal-dialog {
+      max-width: unset !important;
+      .modal-content {
+        width: 95%;
+      }
+    }
+    .react-tel-input {
+      width: 100%;
+    }
+    .c-button {
+      margin-top: 10px;
+    }
+  }
+}

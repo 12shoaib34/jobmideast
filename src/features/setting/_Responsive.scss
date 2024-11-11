@@ -1,0 +1,173 @@
+@media screen and (max-width: 540px) {
+  .notification-setting-contaier {
+    padding: 20px 0;
+    .setting-main {
+      .settings-grid {
+        border-radius: 24px;
+        .inner-seting-items {
+          padding: 10px 10px;
+          padding-right: 0px;
+          .settings-cells-row {
+            display: unset;
+            .credentials-cell {
+              margin: unset;
+
+              form {
+                padding-bottom: 8px;
+              }
+            }
+            .settings-cells {
+              width: 100%;
+              border: unset;
+              margin-left: 20px;
+            }
+          }
+
+          .setting-items-heading {
+            font-size: 14px !important;
+            padding-left: 8px;
+          }
+
+          .setiing-desc {
+            font-size: 14px !important;
+            padding-left: 8px;
+          }
+          .ant-row {
+            .ant-col {
+              padding-left: 10px;
+            }
+          }
+
+          .ant-form-item-label > label {
+            font-size: 12px;
+          }
+
+          .first-option {
+            margin-left: 20px;
+            .ant-form-item-control-input {
+              margin-left: 20px;
+            }
+          }
+
+          .settings-cells-row .credential-settings {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .delete-modal {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-modal.center.medium {
+    .modal-dialog {
+      padding: 0px 25px 0 25px !important;
+      border-radius: 20px !important;
+      .modal-content {
+        padding: 30px 0px !important;
+        border-radius: 8px !important;
+        .close {
+          top: -30px !important;
+          right: -20px !important;
+          border-radius: 6px !important;
+        }
+      }
+    }
+  }
+  .ant-modal-dialog {
+    .ant-modal-content {
+      border-radius: 8px !important;
+    }
+  }
+  .notification-setting-contaier {
+    .back-btn {
+      // margin-top: 20px;
+      display: none;
+      // img {
+      //   width: 32px;
+      //   height: 32px;
+      //   object-fit: contain;
+      // }
+    }
+    .setting-main {
+      .settings-grid {
+        .inner-seting-items {
+          .settings-cells-row {
+            .items-desc {
+              font-size: 8px;
+              width: 160px;
+              // margin: 0 0 10px 0;
+              // padding-left: 30px;
+              // padding-top: 10px;
+            }
+            button {
+              // width: unset;
+            }
+            .credentials-cell {
+              form {
+              }
+            }
+            .settings-cells {
+              label {
+                font-size: 10.2px !important;
+              }
+              .credentials-cell {
+                input {
+                  width: 300px !important;
+                }
+              }
+            }
+          }
+
+          .setting-items-heading {
+          }
+
+          .setiing-desc {
+          }
+          .ant-row {
+            .ant-col {
+              padding-left: 10px;
+            }
+          }
+          .ant-form-item-label > label {
+          }
+
+          .settings-cells-row .credential-settings {
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .notification-setting-contaier {
+    .setting-main {
+      .settings-grid {
+        .inner-seting-items {
+          width: 100%;
+          height: auto;
+          padding: 15px 10px;
+          padding-right: 0px;
+          .settings-cells-row {
+            .credentials-cell {
+              width: 100% !important;
+              margin: auto;
+              padding-right: 10px;
+            }
+          }
+        }
+      }
+    }
+    .ant-form-item-label {
+      display: inline-block;
+      flex-grow: 0;
+      overflow: hidden;
+      white-space: unset !important;
+      text-align: left;
+    }
+  }
+}

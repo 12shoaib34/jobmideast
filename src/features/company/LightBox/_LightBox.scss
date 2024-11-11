@@ -1,0 +1,104 @@
+@import "../../../assets/scss/variables";
+
+.slider-main {
+  .carousel .thumb.selected,
+  .carousel .thumb:hover {
+    border: 3px solid transparent;
+  }
+
+  .carousel.carousel-slider .control-arrow {
+    top: 0;
+    color: $white;
+    font-size: 26px;
+    bottom: 0;
+    margin-top: 0;
+    padding: 5px;
+    // background: rgba(0, 0, 0, 0.5);
+  }
+
+  .slider-wrapper.axis-horizontal {
+    border-radius: 15px;
+  }
+
+  .carousel .thumb {
+    height: 120px;
+    width: 200px !important;
+  }
+  .carousel .thumbs {
+    padding: 0;
+  }
+
+  .slides {
+    position: relative;
+    .bg-blur {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      filter: blur(3px);
+    }
+    .slide-imgs {
+      position: relative;
+      z-index: 1;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      // border-radius: 15px;
+    }
+  }
+
+  .carousel .thumb img {
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  // .carousel .thumbs {
+  //   padding: 0;
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  // }
+
+  .carousel .control-dots .dot {
+    background: $blue;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 2px 1px $shadow-color;
+    opacity: 1;
+  }
+
+  .slides {
+    height: 480px;
+    width: 100%;
+  }
+  .carousel .thumbs-wrapper {
+    margin: 20px;
+
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .carousel-status {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .slider-main .slides {
+    height: 300px;
+    width: 100%;
+  }
+  .carousel .thumbs-wrapper {
+    margin: 10px;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+}

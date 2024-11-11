@@ -1,0 +1,30 @@
+@import "../../assets/scss/variables";
+.saved-credit-card-number {
+  box-shadow: 0 0 10px $shadow-color;
+  background-color: $white;
+  width: 100%;
+  margin-bottom: 20px;
+  height: 36px;
+  border-radius: 36px;
+  display: flex;
+  align-items: center;
+  .card-service-logo {
+    margin-right: 24px;
+    height: 14px;
+  }
+  .ant-radio-wrapper {
+    margin: 0;
+    .ant-radio {
+      margin: 0;
+      margin-left: 10px;
+      margin-right: 24px;
+      position: relative;
+      top: unset;
+    }
+  }
+
+  span {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}

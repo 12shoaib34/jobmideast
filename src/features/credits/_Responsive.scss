@@ -1,0 +1,364 @@
+@import "../../assets/scss/variables";
+
+@media screen and (min-width: 540px) and (max-width: 900px) {
+  .ant-row {
+    display: unset;
+  }
+  .cart-component {
+    max-width: unset;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .credits {
+    padding: 20px 10px;
+
+    p {
+      font-size: 10px !important;
+    }
+
+    .pricing-container {
+      padding: 0;
+      .spin-fix {
+        .pricing-left {
+          .heading-section {
+            padding: 10px 0;
+            padding-right: 20px;
+            p {
+              font-size: 16px !important;
+              max-width: 200px;
+            }
+            .job-credits-container {
+              margin-right: 0;
+              .job-credits-items {
+                padding: 0;
+                h5 {
+                  font-size: 18px;
+                }
+              }
+              .ant-divider {
+                margin: 0px;
+                height: 60px;
+              }
+            }
+          }
+
+          .pricing-main {
+            .pricing-section {
+              margin: 0 0 20px 0;
+              .pricing-row {
+                min-width: 100%;
+
+                .pricing-card {
+                  max-width: 120px;
+                  min-width: 50px;
+                  .pricing-header {
+                    .top-items-head {
+                      height: 38px;
+                      font-size: 10px;
+
+                      .amount {
+                        font-size: 10px;
+                      }
+                    }
+                    .custom-button {
+                      width: 90%;
+                      height: 25px;
+                      font-size: 10px;
+                    }
+                    .c-button span {
+                      font-size: 10px;
+                    }
+                  }
+                  .pricing-items {
+                    .pricings {
+                      height: 38px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 10px;
+                      .check-icon {
+                        font-size: 18px;
+                      }
+                    }
+                    .pricing-typs {
+                      min-height: 45px;
+                      display: flex;
+                      align-items: center;
+
+                      font-size: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .pricing-right {
+          width: 100%;
+          margin: 0 0 20px 0;
+          .card-fix {
+            padding: 0;
+            min-width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .connection-credits {
+      padding-top: 100px;
+      padding-right: 0;
+      flex-direction: column;
+      .connection-right {
+        flex: 1 1;
+        padding-left: 0;
+        margin-top: 20px;
+        height: fit-content;
+        .connection-items {
+          text-align: center;
+
+          h2 {
+            font-size: 20px;
+            margin: 0;
+          }
+
+          p {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin: 20px 0 !important;
+          }
+        }
+
+        .connection-pricing {
+          display: flex;
+
+          .connection-pricing-item {
+            margin: 20px 0 0 0;
+
+            .connection-pricing-item-btn {
+              width: 100%;
+              min-width: 95px;
+              height: 35px;
+              margin: 0;
+            }
+          }
+        }
+      }
+      .connection-left img {
+        padding-right: 40px;
+      }
+    }
+    .interview-container {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      text-align: center;
+      .interview-left {
+        padding-top: 100px;
+        padding-left: 0;
+        h3 {
+          font-size: 20px;
+          letter-spacing: 2px;
+        }
+        .sub-head {
+          font-size: 16px !important;
+          font-family: "Gordita-Bold";
+          margin: 20px 0;
+        }
+        p {
+          margin: 20px 0;
+        }
+      }
+    }
+    .interview-details {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 0px 0;
+      margin-bottom: 20px;
+
+      .pricings {
+        p {
+          margin: 0;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .credits
+    .pricing-container
+    .spin-fix
+    .pricing-right
+    .card-fix
+    .pricing-card
+    .download-transaction-section {
+    justify-content: space-evenly;
+    padding-right: 0px;
+    margin-right: 4px;
+
+    .downlaod-container p {
+      font-size: 10px;
+    }
+  }
+  .credits {
+    .payment-method {
+      .new-card {
+        align-items: center !important;
+        font-size: 12px !important;
+      }
+    }
+  }
+  .c-button.light {
+    font-size: 12px !important;
+    padding: 6px 14px !important;
+    margin-left: 5px !important;
+  }
+  .new-card {
+    span {
+      font-size: 12px;
+    }
+  }
+  .credits .payment-method .pay-form .add-card {
+    margin: 0 0 30px 0;
+  }
+  .credits .payment-method .pay-form {
+    margin: 30px 0 0 0;
+  }
+  .ant-col.wrapper-carding.ant-col-md-24.ant-col-lg-9.ant-col-xl-8 {
+    align-self: center;
+    text-align: center;
+    padding: 16px 0px;
+    width: 100%;
+  }
+  .saved-credit-card-number {
+    padding: 4px 10px;
+  }
+  .set-default {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .check-text {
+      padding-left: 10px;
+      font-size: 12px;
+    }
+    .new-card {
+      width: 30% !important;
+    }
+  }
+  .ant-row {
+    display: unset;
+  }
+  .cart-component {
+    max-width: unset;
+  }
+}
+
+@media screen and (min-width: 541px) and (max-width: 991px) {
+  .credits .pricing-container .spin-fix {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .credits .pricing-container .spin-fix .pricing-right {
+    padding: 50px 0;
+  }
+  .credits .interview-details .pricings .check-icon {
+    margin-bottom: 10px;
+  }
+  .credits .connection-credits {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px;
+    padding-right: 0;
+  }
+  .credits .interview-container {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+  }
+  .credits .interview-details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0;
+    flex-direction: column;
+  }
+  .credits .connection-credits .connection-right {
+    padding: 0 30px;
+  }
+  .credits .connection-credits .connection-left {
+    padding-right: 90px;
+  }
+
+  .credits .pricing-container .spin-fix .pricing-right {
+    width: 100%;
+  }
+
+  .credits .pricing-container .spin-fix .pricing-right .card-fix .pricing-card {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .credit-card-section {
+      width: 100%;
+
+      .ant-divider {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .credits .pricing-container .spin-fix .pricing-right .card-fix {
+    max-width: unset;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  .credits .interview-details {
+    flex-wrap: wrap;
+    padding: 50px 50px;
+  }
+  .credits .interview-details .pricing {
+    text-align: unset;
+  }
+  .credits .interview-details .pricings .check-icon {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 0;
+  }
+  .credits .interview-details .pricings p {
+    margin: 0px;
+    text-align: start;
+  }
+  .credits .interview-container {
+    padding-left: 50px;
+  }
+  .credits .connection-credits {
+    padding-right: 0;
+  }
+  .credits
+    .connection-credits
+    .connection-right
+    .connection-pricing
+    .connection-pricing-item
+    .connection-pricing-item-btn {
+    margin: 0 4px;
+  }
+
+  .credits
+    .pricing-container
+    .spin-fix
+    .pricing-left
+    .pricing-main
+    .pricing-section
+    .pricing-row
+    .pricing-card
+    .pricing-header
+    .custom-button {
+    padding: 0;
+    width: 80%;
+    height: 35px;
+  }
+}

@@ -1,0 +1,32 @@
+.Feature-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 50px;
+
+  .feature {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    .cell {
+      width: calc(100% / 2);
+      text-align: center;
+      font-family: $font-subtitle;
+    }
+
+    .make-premium {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+
+    .btns-cell {
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+}

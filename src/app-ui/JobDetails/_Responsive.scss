@@ -1,0 +1,107 @@
+@media screen and (max-width: 1024px) {
+  .c-job-detail-card {
+    .header {
+      position: relative;
+      flex-wrap: wrap;
+      justify-content: center;
+      .job-info-wrapper {
+        justify-content: center;
+        text-align: center;
+        .job-info {
+          align-items: center;
+          .job-sector {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+    .job-details-wrapper .content-box.first {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .content-section {
+        order: 2;
+      }
+      .benefits-list {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-job-detail-card {
+    .header {
+      top: 0;
+      position: relative;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      justify-content: center;
+      .job-info-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        .job-info {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+      .back-btn {
+        display: unset;
+        position: absolute;
+        left: 16px;
+        display: flex;
+        align-self: center;
+      }
+    }
+    .job-details-wrapper .content-box.first {
+      flex-direction: column;
+
+      .content-section {
+        order: 2;
+      }
+    }
+    .job-details-wrapper {
+      .content-box {
+        .benefits-list {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 540px) {
+  .job-details {
+    padding-left: 0px !important;
+  }
+  .job-details-modal .modal-content .c-job-detail-card {
+    border-radius: 0px;
+  }
+  .c-job-detail-card .header {
+    padding: 20px;
+  }
+
+  .c-job-detail-card .header .banner-items .company-img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+  }
+  .c-job-detail-card {
+    .job-details-wrapper {
+      .details-header {
+        .actions-wrapper {
+          max-width: unset;
+        }
+      }
+    }
+  }
+  .your-jobs {
+    .job-preview-section {
+      .btn-row {
+        .c-button {
+          padding: 8px 40px !important;
+        }
+      }
+    }
+  }
+}

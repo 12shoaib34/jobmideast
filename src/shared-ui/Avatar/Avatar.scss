@@ -1,0 +1,99 @@
+.ava-container {
+  height: auto;
+  width: max-content;
+  position: relative;
+
+  .large {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .medium {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .user-status-active {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    background-color: rgb(148, 223, 51);
+    border: solid 2px $white;
+    border-radius: 50%;
+    bottom: 28px;
+    right: -6px;
+  }
+
+  .user-status-offline {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    background-color: rgb(155, 155, 155);
+    border: solid 2px $white;
+    border-radius: 50%;
+    bottom: 28px;
+    right: -6px;
+  }
+
+  .user-status-unavailable {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 66, 66, 0.986);
+    border: solid 2px $white;
+    border-radius: 50%;
+    bottom: 28px;
+    right: -6px;
+  }
+
+  .small {
+    vertical-align: middle;
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    // margin: 0 0 0 0.5em;
+
+    &.user-status-active {
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      box-sizing: border-box;
+      background-color: rgb(148, 223, 51);
+      border: solid 2px $white;
+      border-radius: 50%;
+      bottom: 5px;
+      right: 0px;
+    }
+
+    &.user-status-offline {
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      box-sizing: border-box;
+      background-color: rgb(155, 155, 155);
+      border: solid 2px $white;
+      border-radius: 50%;
+      bottom: 5px;
+      right: 0px;
+    }
+
+    &.user-status-unavailable {
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      box-sizing: border-box;
+      background-color: rgba(255, 66, 66, 0.986);
+      border: solid 2px $white;
+      border-radius: 50%;
+      bottom: 5px;
+      right: 0px;
+    }
+  }
+}

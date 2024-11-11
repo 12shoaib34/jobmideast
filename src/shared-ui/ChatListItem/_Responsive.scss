@@ -1,0 +1,16 @@
+@media screen and (max-width: 540px) {
+  .chat-list-item {
+    justify-content: flex-start;
+    .chat-item-btns {
+      margin-left: auto;
+    }
+    .chat-text {
+      flex-grow: 1;
+      max-width: 500px;
+      width: 50%;
+      .text {
+        width: 100% !important;
+      }
+    }
+  }
+}

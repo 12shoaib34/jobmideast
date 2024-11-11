@@ -1,0 +1,29 @@
+.c-media-picker{
+    display: flex;
+    align-items: center;
+    .upload-button{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background: $blue;
+        color: $white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #upload-icon{
+        width: 90px;
+        margin: 0px 0px 25px 0px;
+    }
+    .ant-upload.ant-upload-drag {
+        border: 3px dashed #d9d9d9;
+        border-radius: 10px;
+        padding: 40px 0px;
+    }
+} 
+@media (min-width: 576px) {
+.modal-dialog {
+    max-width: 800px;
+}
+}

@@ -1,0 +1,193 @@
+@media screen and (max-width: 991px) {
+  // c-modal styling
+  .c-modal {
+    &.right-side {
+      &.lg {
+        .modal-dialog {
+          min-width: 100%;
+        }
+      }
+      .modal-dialog {
+        min-width: 100%;
+        max-width: 400px !important;
+        .modal-content {
+          width: 100%;
+          max-width: 400px;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &.center {
+      &.medium {
+        .modal-dialog {
+          .modal-content {
+            // width: 55%;
+            margin: 20px 0;
+          }
+        }
+      }
+
+      &.small {
+        .modal-dialog {
+          .modal-content {
+            width: 95%;
+            max-width: 460px;
+            margin: 20px 0;
+          }
+        }
+      }
+      &.lg {
+        .modal-dialog {
+          .modal-content {
+            margin-top: 50px;
+            width: 95%;
+            max-width: 650px;
+            // .close {
+            //   right: 0;
+            //   top: 0px;
+            //   width: 30px;
+            //   height: 30px;
+            //   svg {
+            //     font-size: 26px;
+            //   }
+            // }
+            // .close {
+            //   position: absolute;
+            //   top: -30px;
+            //   left: 0;
+            //   transform: translateX(calc(50% - 24px));
+            //   margin: 0 auto;
+            //   width: 24px;
+            //   height: 24px;
+            //   border-radius: 12px;
+            //   background-color: $white;
+            //   outline: none;
+            //   opacity: 1;
+            //   display: flex;
+            //   align-items: center;
+            //   justify-content: center;
+            //   svg {
+            //     font-size: 14px;
+            //     color: $text-color;
+            //   }
+            // }
+          }
+        }
+      }
+      &.job-details {
+        .modal-dialog {
+          .modal-content {
+            padding: 0;
+            // overflow: hidden;
+          }
+        }
+      }
+
+      .modal-dialog {
+        padding: 15px 0;
+        .modal-content {
+          padding: 15px 0 0 0;
+        }
+      }
+    }
+  }
+  .modal-content {
+    width: 95%;
+    margin: 0px 0;
+
+    .close {
+      position: absolute;
+      top: -32px;
+      right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .c-modal.center .modal-dialog {
+    max-width: unset;
+  }
+  .c-modal {
+    &.right-side {
+      &.lg {
+        .modal-dialog {
+          min-width: 100%;
+        }
+      }
+      .modal-dialog {
+        min-width: 100%;
+        max-width: 400px !important;
+        .modal-content {
+          min-width: 100%;
+          border-radius: 0px !important;
+          width: 100%;
+          max-width: 400px;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &.center {
+      &.medium {
+        .modal-dialog {
+          .modal-content {
+            width: 95%;
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+
+      &.small {
+        .modal-dialog {
+          .modal-content {
+            width: 95%;
+            max-width: 460px;
+            margin: 20px 0 0 0;
+          }
+        }
+      }
+      &.lg {
+        .modal-dialog {
+          .modal-content {
+            margin-top: 0;
+            width: 95%;
+            max-width: 650px;
+          }
+        }
+      }
+
+      &.job-details {
+        .modal-dialog {
+          .modal-content {
+            padding: 0;
+            // overflow: hidden;
+          }
+        }
+      }
+
+      .modal-dialog {
+        padding: 0px 0 0 0;
+        .modal-content {
+          padding: 15px;
+          min-width: 100%;
+          border-radius: 0px !important;
+        }
+      }
+    }
+  }
+  .modal-content {
+    width: 95%;
+    margin: 0px 0 0 0;
+    padding: 20px 0px 60px 0px !important;
+    .close {
+      position: absolute;
+      top: 8px !important;
+      right: 8px !important;
+
+      svg {
+        font-size: 20px !important;
+      }
+    }
+  }
+}

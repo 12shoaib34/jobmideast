@@ -1,0 +1,256 @@
+@import '../../assets/scss/variables';
+
+.delete-modal {
+  color: $text-color;
+  padding: 40px;
+  text-align: center;
+  .heading {
+    font-size: $font-size-lg;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .text {
+    font-size: $font-size-sm;
+    margin-bottom: 2em;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+.notification-setting-contaier {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+  min-height: fit-content;
+  .back-btn {
+    // margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+  }
+
+  & .setting-main {
+    // .c-margin {
+    //   margin: 0 0 0 10px;
+    // }
+
+    & .settings-grid {
+      // height: 200px;
+      overflow: hidden;
+      border-radius: 40px;
+      padding: 0;
+      box-shadow: 0 0 30px $shadow-color;
+
+      & .settings-header {
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        background: $primary;
+        background: linear-gradient(25deg, #341e5b, #5271ff);
+        // box-shadow: none;
+
+        & .notfication-heading {
+          color: $white;
+          font-size: $font-size-lg;
+          margin: 0;
+        }
+      }
+      .inner-seting-items {
+        width: 100%;
+        height: auto;
+        padding: 15px 30px;
+        // background-color: red;
+        padding-right: 0px;
+
+        .ant-switch-checked {
+          background-color: $green;
+        }
+
+        .c-switch {
+          .switch-top {
+            margin-top: -22px;
+          }
+        }
+        .ant-row {
+          display: unset;
+          // flex-flow: row-reverse;
+          // justify-content: flex-end;
+
+          .ant-col {
+            padding-left: 20px;
+          }
+        }
+
+        .settings-items-heading {
+          font-size: $font-size-lg;
+          // font-size: 18px; //after matching with xd
+          // font-family: $font-medium;
+          color: $secondary;
+          // margin: 10px 0;
+        }
+
+        .settings-rows {
+          display: flex;
+          align-items: flex-start;
+          margin: 0 0 15px 0;
+
+          label {
+            font-size: $font-size-sm;
+            color: $text-color;
+            margin: -2px 0 5px 0;
+          }
+        }
+
+        .setiing-desc {
+          font-size: $font-size-lg;
+          color: $secondary;
+        }
+        .settings-cells-row {
+          display: flex;
+          margin: 20px 0 10px 0;
+          // background-color: red;
+
+          .settings-cells {
+            width: calc(100% / 3);
+            border-right: 2px solid #eee;
+
+            .ant-row {
+              display: unset;
+              // flex-flow: row-reverse;
+              // justify-content: flex-end;
+            }
+            .ant-form-item-control {
+              flex-grow: 0;
+
+              .ant-form-item-control-input {
+                min-height: unset;
+              }
+              // .ant-switch-checked {
+              //   background-color: $green;
+              // }
+            }
+            .ant-form-item-label > label {
+              height: unset;
+              font-size: 12px;
+            }
+
+            .ant-form-item-label > label::after {
+              display: none;
+            }
+
+            &:last-child {
+              border: none;
+            }
+          }
+
+          .credentials-cell {
+            width: 100%;
+            margin: auto;
+            margin: 0;
+            // background: red;
+
+            .ant-form {
+              // background-color: red;
+              .ant-col {
+                width: 240px;
+                margin-bottom: 10px;
+                .ant-input-affix-wrapper {
+                  .ant-input-suffix {
+                    position: absolute;
+                    /* margin-left: 4px; */
+                    padding-right: 10px;
+                    padding-top: 7px;
+                    right: 0;
+                  }
+                }
+              }
+            }
+            .d-flex {
+              .update-btn {
+                height: 30px;
+                width: 80px !important;
+                margin-top: 4px !important;
+                padding: 18px 25px !important;
+                margin-right: 10px !important;
+                margin-left: unset !important;
+              }
+            }
+          }
+          .items-desc {
+            font-size: $font-size-x-sm;
+            width: 200px;
+            margin: 0 0 10px 0;
+            padding-left: 30px;
+            padding-top: 10px;
+          }
+
+          .credential-settings {
+            font-size: 18px;
+            font-family: $font-medium;
+            color: $secondary;
+            margin: 28px 20px;
+            // text-align: center;
+          }
+        }
+      }
+    }
+    .delete-account-btn {
+      margin-top: 40px;
+      display: flex;
+      justify-content: flex-start;
+      // background: red;
+      p {
+        color: $blue;
+        text-decoration: underline;
+
+        cursor: pointer;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+.delete-modal {
+  color: $text-color;
+  .heading {
+    font-size: $font-size-lg;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  .text {
+    font-size: $font-size-sm;
+    margin-bottom: 2em;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+.feedback-modal {
+  color: $text-color;
+
+  .text {
+    font-size: $font-size-sm;
+    margin-bottom: 1em;
+  }
+  .feedback-text-area {
+    margin-bottom: 2em;
+    .ant-form-item-control-input-content {
+      textarea {
+        border-radius: 16px;
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}

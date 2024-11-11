@@ -1,0 +1,104 @@
+@media only screen and (max-width: 540px) {
+  .image-uploader-modal-section {
+    .modal-dialog {
+      padding: 25px !important;
+      .modal-content {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .image-uploader-modal-section {
+    .modal-dialog {
+      padding: 25px !important;
+      .modal-content {
+        width: 90% !important;
+        .image-uploader-main {
+          flex-direction: column;
+          .light-box-section {
+            width: unset;
+            height: 40vh;
+            .company-carousel {
+              height: 100%;
+              // display: none;
+              .carousel:nth-child(1) {
+                height: 100%;
+                .slider-wrapper {
+                  height: 100%;
+                  .slider {
+                    height: 100%;
+                    .slide {
+                      .slides {
+                        height: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+              .carousel:nth-child(2) {
+                display: none;
+              }
+              .carousel .slide img {
+                width: 100%;
+                height: 100%;
+                vertical-align: top;
+                border: 0;
+                max-height: 500px;
+                min-height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+          .image-upload-section {
+            width: 100%;
+            border-radius: 10px;
+            flex-flow: row;
+            gap: 1rem;
+
+            .selected-image-container {
+              flex: none;
+              .selected-image {
+                display: none;
+              }
+              .media-container {
+              }
+              .update-btn {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .add-media-btn {
+    width: 10px;
+    padding: 0;
+    margin: 0 5px;
+  }
+  .c-button {
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .image-uploader-modal-section {
+    .modal-dialog {
+      padding: 25px !important;
+      .modal-content {
+        width: 90% !important;
+        .image-uploader-main {
+          .light-box-section {
+            // display: none;
+          }
+          .image-upload-section {
+            // width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+}

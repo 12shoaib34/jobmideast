@@ -1,0 +1,716 @@
+[
+	{
+		"identifier": {
+			"id": "vscode.bat"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.clojure"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.coffeescript"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.configuration-editing"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.cpp"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.csharp"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.css"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.css-language-features"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.debug-auto-launch"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.debug-server-ready"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.docker"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.emmet"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.extension-editing"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.fsharp"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.git"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.git-ui"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.github"
+		},
+		"version": "0.0.1"
+	},
+	{
+		"identifier": {
+			"id": "vscode.github-authentication"
+		},
+		"version": "0.0.1"
+	},
+	{
+		"identifier": {
+			"id": "vscode.go"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.groovy"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.grunt"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.gulp"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.handlebars"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.hlsl"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.html"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.html-language-features"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.image-preview"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.ini"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.jake"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.java"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.javascript"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.json"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.json-language-features"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.julia"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.less"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.log"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.lua"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.make"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.markdown"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.markdown-language-features"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.merge-conflict"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.microsoft-authentication"
+		},
+		"version": "0.0.1"
+	},
+	{
+		"identifier": {
+			"id": "vscode.notebook-markdown-extensions"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.npm"
+		},
+		"version": "1.0.1"
+	},
+	{
+		"identifier": {
+			"id": "vscode.objective-c"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.perl"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.php"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.php-language-features"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.powershell"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.pug"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.python"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.r"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.razor"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.ruby"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.rust"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.scss"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.search-result"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.shaderlab"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.shellscript"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.simple-browser"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.sql"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.swift"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.testing-editor-contributions"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-abyss"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-defaults"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-kimbie-dark"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-monokai"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-monokai-dimmed"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-quietlight"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-red"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-solarized-dark"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-solarized-light"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.theme-tomorrow-night-blue"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.typescript"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.typescript-language-features"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.vb"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.vscode-theme-seti"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.xml"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "vscode.yaml"
+		},
+		"version": "1.0.0"
+	},
+	{
+		"identifier": {
+			"id": "74th.high-contrast-icons",
+			"uuid": "59c4d4cb-768b-4551-a0ac-3d6f3a6896b8"
+		},
+		"version": "1.0.1",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "74th.monokai-charcoal-high-contrast",
+			"uuid": "005e6dee-403c-4ffe-a726-2f5ce31ae2b0"
+		},
+		"version": "3.2.0",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "abusaidm.html-snippets",
+			"uuid": "be992f3f-9f22-4b66-a1d2-ecad04c28a28"
+		},
+		"version": "0.2.1",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "bradgashler.htmltagwrap",
+			"uuid": "c16f95f6-9b42-4a24-9bf4-245d4ea54fc5"
+		},
+		"version": "0.0.7",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "christian-kohler.path-intellisense",
+			"uuid": "a41c1549-4053-44d4-bf30-60fc809b4a86"
+		},
+		"version": "2.3.0",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "cjay.es6-javascript-snippets",
+			"uuid": "dd259bb9-4459-4886-946c-224a1052db0d"
+		},
+		"version": "0.6.1",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "dsznajder.es7-react-js-snippets",
+			"uuid": "19804510-b475-4dae-b0f7-6ca08fd1af0c"
+		},
+		"version": "3.1.1",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "dzannotti.vscode-babel-coloring",
+			"uuid": "d7b592dd-41c9-4f2b-acf3-055ae65e55c6"
+		},
+		"version": "0.0.4",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "esbenp.prettier-vscode",
+			"uuid": "96fa4707-6983-4489-b7c5-d5ffdfdcce90"
+		},
+		"version": "6.4.0",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "formulahendry.auto-close-tag",
+			"uuid": "d3836729-9cc1-42c1-b2af-d50071f57d29"
+		},
+		"version": "0.5.10",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "formulahendry.code-runner",
+			"uuid": "a6a0c5b2-d078-4bf5-a9ee-4e37054414b3"
+		},
+		"version": "0.11.2",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "hipstersmoothie-public.github-dark-high-contrast",
+			"uuid": "e8aa9c06-5593-4ae6-8587-e3ee70229e8e"
+		},
+		"version": "0.0.13",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "ionutvmi.path-autocomplete",
+			"uuid": "0d1241e3-fa60-4f24-8f2a-6d7085677c48"
+		},
+		"version": "1.17.1",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "johnpapa.winteriscoming",
+			"uuid": "fd6d3dc6-b307-4589-82a6-78e2afec3d77"
+		},
+		"version": "1.4.4",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "meezilla.json",
+			"uuid": "e7bc27f0-a7f2-441b-b9df-103e37bd1e58"
+		},
+		"version": "0.0.1",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "mgmcdermott.vscode-language-babel",
+			"uuid": "dd5a2c83-ad8c-4839-a529-0644e5acb646"
+		},
+		"version": "0.0.30",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "mohsen1.prettify-json",
+			"uuid": "67e66172-30c7-4478-8f5d-6eac4ae755dc"
+		},
+		"version": "0.0.3",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "ms-dotnettools.csharp",
+			"uuid": "d0bfc4ab-1d3a-4487-8782-7cf6027b4fff"
+		},
+		"version": "1.23.9",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "ms-vscode.js-debug",
+			"uuid": "25629058-ddac-4e17-abba-74678e126c5d"
+		},
+		"version": "1.55.2"
+	},
+	{
+		"identifier": {
+			"id": "ms-vscode.js-debug-companion",
+			"uuid": "99cb0b7f-7354-4278-b8da-6cc79972169d"
+		},
+		"version": "1.0.9"
+	},
+	{
+		"identifier": {
+			"id": "ms-vscode.node-debug",
+			"uuid": "b6ded8fb-a0a0-4c1c-acbd-ab2a3bc995a6"
+		},
+		"version": "1.44.19"
+	},
+	{
+		"identifier": {
+			"id": "ms-vscode.node-debug2",
+			"uuid": "36d19e17-7569-4841-a001-947eb18602b2"
+		},
+		"version": "1.42.5"
+	},
+	{
+		"identifier": {
+			"id": "ms-vscode.references-view",
+			"uuid": "dc489f46-520d-4556-ae85-1f9eab3c412d"
+		},
+		"version": "0.0.77"
+	},
+	{
+		"identifier": {
+			"id": "ms-vscode.vscode-js-profile-table",
+			"uuid": "7e52b41b-71ad-457b-ab7e-0620f1fc4feb"
+		},
+		"version": "0.0.11"
+	},
+	{
+		"identifier": {
+			"id": "pkief.material-icon-theme",
+			"uuid": "5db78037-f674-459f-a236-db622c427c5b"
+		},
+		"version": "4.6.0",
+		"installed": true,
+		"state": {
+			"material-icon-theme.version": "4.6.0"
+		}
+	},
+	{
+		"identifier": {
+			"id": "rangav.vscode-thunder-client",
+			"uuid": "2fd56207-78ef-49d4-95d2-9b801eee4dbf"
+		},
+		"version": "1.2.2",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "ritwickdey.liveserver",
+			"uuid": "b63c44fd-0457-4696-99e9-dbfdf70d77de"
+		},
+		"version": "5.6.1",
+		"installed": true,
+		"state": {
+			"liveServer.setup.version": "5.6.1"
+		}
+	},
+	{
+		"identifier": {
+			"id": "sibiraj-s.vscode-scss-formatter",
+			"uuid": "01708053-6fab-403f-9787-9d5f3d8f7d6a"
+		},
+		"version": "2.1.0",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "visualstudioexptteam.vscodeintellicode",
+			"uuid": "876e8f93-74d0-4f4f-91b7-34a09f19f444"
+		},
+		"version": "1.2.14",
+		"installed": true
+	},
+	{
+		"identifier": {
+			"id": "xabikos.javascriptsnippets",
+			"uuid": "a2cec723-5349-460d-9de9-0fd1f8d3456f"
+		},
+		"version": "1.8.0",
+		"installed": true
+	}
+]
