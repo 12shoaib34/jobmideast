@@ -11,19 +11,14 @@ import Pricing from "./Pricing";
 import { getCounter } from "../dashboard/thunk";
 import { selectCounter } from "../dashboard/slice";
 import { Divider, Col, Row } from "antd";
+import "./_Credits.scss";
 import "./_Responsive.scss";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import PaymentMethod from "./PaymentMethod";
 import Successfull from "./Successful";
 import { showSuccessMessage, showWarningMessage } from "../../utils/message";
-import {
-  emptyCart,
-  selectCart,
-  selectCartBuySuccess,
-  selectCards,
-  defaultBuyCartSuccess,
-} from "./slice";
+import { emptyCart, selectCart, selectCartBuySuccess, selectCards, defaultBuyCartSuccess } from "./slice";
 import { buyCart } from "./thunk";
 import { selectEmployerProfile } from "./../auth/slice";
 import { getTransactionHistoryDownload } from "../auth/thunk";
@@ -64,7 +59,7 @@ const Credits = ({ location: { noAddOns = false } }) => {
 
   useEffect(() => {
     dispatch(getCounter());
-    dispatch(getTransactionHistoryDownload())
+    dispatch(getTransactionHistoryDownload());
   }, []);
 
   useEffect(() => {
@@ -93,18 +88,10 @@ const Credits = ({ location: { noAddOns = false } }) => {
       showWarningMessage("Cart is empty");
       return;
     }
-    if (
-      cards.length > 0 &&
-      paymentSteps === 1 &&
-      cart.find((item) => item.quantity > 0)
-    ) {
+    if (cards.length > 0 && paymentSteps === 1 && cart.find((item) => item.quantity > 0)) {
       const cartPayload = cart.filter((item) => item.quantity != 0);
-      const payloadForPackage = cartPayload.filter(
-        (item) => item.type === "package"
-      );
-      const payloadForAddOns = cartPayload.filter(
-        (item) => item.type === "addOn"
-      );
+      const payloadForPackage = cartPayload.filter((item) => item.type === "package");
+      const payloadForAddOns = cartPayload.filter((item) => item.type === "addOn");
       const packages = repeatIdByQuantity(payloadForPackage);
       const addOns = repeatIdByQuantity(payloadForAddOns);
       const payload = { Packages: packages, Connects: addOns };
@@ -121,10 +108,7 @@ const Credits = ({ location: { noAddOns = false } }) => {
       case 1:
         return (
           <Elements stripe={stripePromise}>
-            <PaymentMethod
-              setIsUKCard={setIsUKCard}
-              onBack={() => setPaymentSteps(0)}
-            />
+            <PaymentMethod setIsUKCard={setIsUKCard} onBack={() => setPaymentSteps(0)} />
           </Elements>
         );
       case 2:
@@ -169,9 +153,7 @@ const Credits = ({ location: { noAddOns = false } }) => {
                 }}
               />
               <div className="job-credits-items">
-                <a
-                  href={`${baseURL}/employer-transaction-history/download-pdf/${user?.shareProfileId}`}
-                  target="_blank">
+                <a href={`${baseURL}/employer-transaction-history/download-pdf/${user?.shareProfileId}`} target="_blank">
                   <div className="download-img">
                     <FaCloudDownloadAlt />
                   </div>

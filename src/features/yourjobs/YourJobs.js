@@ -11,15 +11,7 @@ import PostJob from "../postJob/PostJob";
 import Modal from "../../shared-ui/Modal/Modal";
 import { Modal as antModal } from "antd";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import {
-  getCounter,
-  getJobList,
-  deleteJobs,
-  duplicateJob,
-  getPostedJobs,
-  getJobPost,
-  getJobDetailsById,
-} from "./thunk";
+import { getCounter, getJobList, deleteJobs, duplicateJob, getPostedJobs, getJobPost, getJobDetailsById } from "./thunk";
 import {
   selectCounter,
   selectJobList,
@@ -31,18 +23,8 @@ import {
   selectJobListPage,
   selectJobByIdSuccess,
 } from "./slice";
-import {
-  getAppliedProfiles,
-  getOtherProfiles,
-  updateEmploymentActivities,
-} from "./service";
-import {
-  selectCurrencyType,
-  selectEmployerProfile,
-  selectEmploymentType,
-  selectJobStatus,
-  selectSalaryType,
-} from "../auth/slice";
+import { getAppliedProfiles, getOtherProfiles, updateEmploymentActivities } from "./service";
+import { selectCurrencyType, selectEmployerProfile, selectEmploymentType, selectJobStatus, selectSalaryType } from "../auth/slice";
 import moment from "moment";
 import { success } from "../../utils/helper";
 import { showSuccessMessage, showWarningMessage } from "../../utils/message";
@@ -77,11 +59,7 @@ const ShareComponent = ({ profileId, jobId }) => {
           </span> */}
 
           <span className="btns">
-            <img
-              className="avatar"
-              src={require("../../assets/images/icons/email-icon-2.svg")}
-              alt=""
-            />
+            <img className="avatar" src={require("../../assets/images/icons/email-icon-2.svg").default} alt="" />
             <div> Email</div>
           </span>
 
@@ -95,11 +73,7 @@ const ShareComponent = ({ profileId, jobId }) => {
           </span> */}
         </div>
         <Form className="c-form" layout="vertical">
-          <Form.Item
-            name="profileLink"
-            className="c-input my-2 form-padding w-100"
-            label={"Embed"}
-          >
+          <Form.Item name="profileLink" className="c-input my-2 form-padding w-100" label={"Embed"}>
             <Input
               // autoComplete={"" + Math.random()}
               readOnly
@@ -145,8 +119,7 @@ const YourJobs = () => {
   const [filterModalShow, setFilterModalShow] = useState(false);
   const [filteredObject, setFilteredObject] = useState(null);
   const [itemSelected, setItemSelected] = useState(false);
-  const [selectJobTitleFromSuperSelect, setSelectJobTitleFromSuperSelect] =
-    useState(null);
+  const [selectJobTitleFromSuperSelect, setSelectJobTitleFromSuperSelect] = useState(null);
   const [appliedProfiles, setAppliedProfiles] = useState([]);
   const [pagination, setPagination] = useState({ page: 1, limit: 10 });
   const [pagesData, setPagesData] = useState({ currentPage: 1, totalItems: 1 });
@@ -185,14 +158,7 @@ const YourJobs = () => {
   useEffect(() => {
     console.log("showJobApplications", showJobApplications);
   }, [showJobApplications]);
-  const {
-    jobCredits,
-    contactCredits,
-    newMessages,
-    newApplication,
-    interviewsToday,
-    teamMembers,
-  } = counter;
+  const { jobCredits, contactCredits, newMessages, newApplication, interviewsToday, teamMembers } = counter;
 
   useEffect(() => {
     dispatch(getCounter());
@@ -273,10 +239,7 @@ const YourJobs = () => {
     if (!selectJobTitleFromSuperSelect) {
       dispatch(getJobList({ params: { skipLoading } }));
     }
-    const req = [
-      getAppliedProfiles(selectedJobPost?.id),
-      getOtherProfiles(selectedJobPost?.id),
-    ];
+    const req = [getAppliedProfiles(selectedJobPost?.id), getOtherProfiles(selectedJobPost?.id)];
 
     Promise.all(req).then((res) => {
       setAppliedProfiles(res[0].data);
@@ -344,20 +307,12 @@ const YourJobs = () => {
       title: "",
       dataIndex: "id",
       width: 10,
-      render: (text) => (
-        <img
-          src={require("../../assets/images/icons/eye.svg")}
-          onClick={() => handlePreviewJob(text)}
-          fontSize="20px"
-        />
-      ),
+      render: (text) => <img src={require("../../assets/images/icons/eye.svg")} onClick={() => handlePreviewJob(text)} fontSize="20px" />,
     },
     {
       title: "Date Posted",
       dataIndex: "createdAt",
-      render: (text) => (
-        <div>{moment(text ? text : moment()).format("DD-MM-YYYY")}</div>
-      ),
+      render: (text) => <div>{moment(text ? text : moment()).format("DD-MM-YYYY")}</div>,
     },
     {
       title: "Job Title",
@@ -459,9 +414,6 @@ const YourJobs = () => {
                   getProfiles();
                 }}
                 keys={["id", "jobTitle"]}
-                onClear={() => {
-                  dispatch(getJobList());
-                }}
               />
             </Form.Item>
             {/* <CButton themecolor="primary">List View</CButton> */}
@@ -473,42 +425,42 @@ const YourJobs = () => {
               className="cards"
               count={jobCredits}
               content={"Job credits"}
-              src={require("../../assets/images/dashboard/yellow.png")}
+              src={require("../../assets/images/dashboard/yellow.png").default}
               goto="/credits"
             />
             <CStatisticCard
               className="cards"
               count={contactCredits}
               content={"Contact credits"}
-              src={require("../../assets/images/dashboard/light-green.png")}
+              src={require("../../assets/images/dashboard/light-green.png").default}
               goto="/credits"
             />
             <CStatisticCard
               className="cards"
               count={newMessages}
               content={"New messages"}
-              src={require("../../assets/images/dashboard/green.png")}
+              src={require("../../assets/images/dashboard/green.png").default}
               goto="/chat"
             />
             <CStatisticCard
               className="cards"
               count={newApplication}
               content={"New application"}
-              src={require("../../assets/images/dashboard/purple.png")}
+              src={require("../../assets/images/dashboard/purple.png").default}
               goto="/"
             />
             <CStatisticCard
               className="cards"
               count={interviewsToday}
               content={"Interviews today"}
-              src={require("../../assets/images/dashboard/sky-blue.png")}
+              src={require("../../assets/images/dashboard/sky-blue.png").default}
               goto="/"
             />
             <CStatisticCard
               className="cards"
               count={teamMembers}
               content={"Team members"}
-              src={require("../../assets/images/dashboard/pink.png")}
+              src={require("../../assets/images/dashboard/pink.png").default}
               goto="/"
             />
           </div>
@@ -520,24 +472,14 @@ const YourJobs = () => {
           {SelectJob && (
             <div className="header">
               {selectedJobIds.length === 1 && (
-                <span
-                  onClick={() => handleUpdateJobPost()}
-                  className="mx-1 cursor-pointer"
-                >
+                <span onClick={() => handleUpdateJobPost()} className="mx-1 cursor-pointer">
                   Edit
                 </span>
               )}
-              <span
-                onClick={() => showConfirmDeleteJobs()}
-                className="mx-1 cursor-pointer"
-                style={{ color: "red" }}
-              >
+              <span onClick={() => showConfirmDeleteJobs()} className="mx-1 cursor-pointer" style={{ color: "red" }}>
                 Delete
               </span>
-              <span
-                onClick={() => handleDuplicateJobs()}
-                className="mx-1 mr-2 cursor-pointer"
-              >
+              <span onClick={() => handleDuplicateJobs()} className="mx-1 mr-2 cursor-pointer">
                 Duplicate
               </span>
               {selectedJobIds.length < 2 && (
@@ -545,32 +487,19 @@ const YourJobs = () => {
                   <Popover
                     overlayClassName="share-dropdown"
                     placement="bottom"
-                    content={
-                      <ShareComponent
-                        profileId={profile?.user?.shareProfileId}
-                        jobId={selectedJobIds[selectedJobIds.length - 1]}
-                      />
-                    }
+                    content={<ShareComponent profileId={profile?.user?.shareProfileId} jobId={selectedJobIds[selectedJobIds.length - 1]} />}
                     trigger="click"
                   >
                     <span className="cursor-pointer">
                       Share
-                      <img
-                        className="avatar"
-                        src={require("../../assets/images/icons/profile/fly.png")}
-                        alt=""
-                      />
+                      <img className="avatar" src={require("../../assets/images/icons/profile/fly.png").default} alt="" />
                     </span>
                   </Popover>
                 </>
               )}
             </div>
           )}
-          <DragScroll
-            className="ScrollTable"
-            width={"calc(100vw - 170px)"}
-            height={"100%"}
-          >
+          <DragScroll className="ScrollTable" width={"calc(100vw - 170px)"} height={"100%"}>
             <div className="overflow-div">
               <Table
                 loading={isLoading}
@@ -616,9 +545,7 @@ const YourJobs = () => {
         </div>
       )}
       {/*----------------------------------------------------------- */}
-      <div
-        className={`job-post-wrapper-hide ${showJobPost ? "show-post" : "post-hide"}`}
-      >
+      <div className={`job-post-wrapper-hide ${showJobPost ? "show-post" : "post-hide"}`}>
         <PostJob
           jobPostId={selectedForEditId}
           setJobPostId={setSelectedForEditId}
@@ -626,11 +553,7 @@ const YourJobs = () => {
           HandleForm={() => setPost(false)}
         />
       </div>
-      <div
-        className={`job-applications ${
-          showJobApplications ? "job-applications-show" : "job-application-hide"
-        }`}
-      >
+      <div className={`job-applications ${showJobApplications ? "job-applications-show" : "job-application-hide"}`}>
         <div className="header">
           <div className="first-header-row">
             <span className="back-btn">
@@ -659,9 +582,7 @@ const YourJobs = () => {
                 </Button>
                 <div className="title">
                   <span>Job Applications : </span>
-                  <span className="blue-text ml-2">
-                    {`${selectedJobPost?.jobTitle?.title} (Job ID :${selectedJobPost?.id})`}
-                  </span>
+                  <span className="blue-text ml-2">{`${selectedJobPost?.jobTitle?.title} (Job ID :${selectedJobPost?.id})`}</span>
                 </div>
               </span>
               <span className="search-interview">
@@ -721,7 +642,6 @@ const YourJobs = () => {
           setItemSelected={setItemSelected}
           setAppliedProfiles={setAppliedProfiles}
           setOtherProfiles={setOtherProfiles}
-          setFilterModalShow={setFilterModalShow}
           getProfiles={getProfiles}
           onSelectCards={(appliedProfiles, otherProfiles) => {
             setAppliedProfiles(appliedProfiles);
@@ -743,14 +663,7 @@ const YourJobs = () => {
           }}
         >
           <JobDetails
-            data={transformJobData(
-              selectedJob,
-              jobTitles,
-              employmentTypes,
-              countries,
-              salaryTypes,
-              currencyType
-            )}
+            data={transformJobData(selectedJob, jobTitles, employmentTypes, countries, salaryTypes, currencyType)}
             showAllDetails={false}
             jobDetailsFromYourJobs={jobDetails}
             setJobDetails={setJobDetails}

@@ -5,16 +5,7 @@ import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { Row, Col, DatePicker, Empty } from "antd";
 import { ImCalendar } from "react-icons/im";
 import { FcVideoFile, FcImageFile, FcDocument } from "react-icons/fc";
-import {
-  Dropdown,
-  Menu,
-  Tabs,
-  Form,
-  Input,
-  Select,
-  Checkbox,
-  Divider,
-} from "antd";
+import { Dropdown, Menu, Tabs, Form, Input, Select, Checkbox, Divider } from "antd";
 import Avatar from "../Avatar/Avatar";
 import Modal from "../../shared-ui/Modal/Modal";
 import Button from "../../shared-ui/Button/Button";
@@ -26,16 +17,8 @@ import * as Rules from "../../utils/rules";
 
 import moment from "moment";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import {
-  selectAppliedForJobs,
-  selectInterviewPanelList,
-  selectConversations,
-} from "../../features/chat/slice";
-import {
-  getAppliedJobs,
-  getInterviewPanel,
-  deleteConversationFiles,
-} from "../../features/chat/thunk";
+import { selectAppliedForJobs, selectInterviewPanelList, selectConversations } from "../../features/chat/slice";
+import { getAppliedJobs, getInterviewPanel, deleteConversationFiles } from "../../features/chat/thunk";
 import { selectNewProfiles } from "../../features/dashboard/slice";
 // import { selectEmployerProfile } from "../../features/auth/slice";
 
@@ -51,10 +34,8 @@ const CUserProfile = ({
 }) => {
   const dispatch = useAppDispatch();
   const [interviewModalForm] = Form.useForm();
-  const [showInterviewDetailsModal, setShowInterviewDetailsModal] =
-    useState(false);
-  const [showVideoQuestionareModal, setShowVideoQuestionareModal] =
-    useState(false);
+  const [showInterviewDetailsModal, setShowInterviewDetailsModal] = useState(false);
+  const [showVideoQuestionareModal, setShowVideoQuestionareModal] = useState(false);
   const [timeLimit, setTimeLimit] = useState(5);
   const [questionCounter, setQuestionCounter] = useState(1);
   const [inviteToChat, setInviteToChat] = useState(false);
@@ -76,26 +57,20 @@ const CUserProfile = ({
   }, []);
 
   const handelDeleteFilesWithAPI = (id) => {
-    dispatch(deleteConversationFiles(id))
+    dispatch(deleteConversationFiles(id));
     console.log("OD", id);
   };
   const menu = (
     <Menu>
       <Menu.Item>
-        <div onClick={() => setShowInterviewDetailsModal(true)}>
-          Arrange face to face interview
-        </div>
+        <div onClick={() => setShowInterviewDetailsModal(true)}>Arrange face to face interview</div>
         <Modal
           backdropClassName="video-questionare-back-drop"
           className="c-interview-modal center medium modal-responsive"
           show={showInterviewDetailsModal}
           onHide={() => setShowInterviewDetailsModal(false)}
         >
-          <Form
-            onFinish={handleVideoInterviewSubmit}
-            form={interviewModalForm}
-            layout="vertical"
-          >
+          <Form onFinish={handleVideoInterviewSubmit} form={interviewModalForm} layout="vertical">
             <Row className="c-interview-modal-header">
               <Col span={10}>
                 <div classname="id">
@@ -103,11 +78,7 @@ const CUserProfile = ({
                 </div>
               </Col>
               <Col span={14}>
-                <Form.Item
-                  name="savedFilters"
-                  className="c-input w-100 select-lg"
-                  rules={null}
-                >
+                <Form.Item name="savedFilters" className="c-input w-100 select-lg" rules={null}>
                   <Select
                     getPopupContainer={(trigger) => trigger.parentNode}
                     className="select-lg face-interview-panel scroll-to-smooth"
@@ -118,23 +89,13 @@ const CUserProfile = ({
             </Row>
             <Row gutter={[32, 16]} className="face-interview">
               <Col span={12} xs={{ span: 24 }} md={{ span: 12 }}>
-                <Form.Item
-                  name="companyName"
-                  rules={Rules.requiredRule}
-                  label="Company Name"
-                  className="c-input w-100"
-                >
+                <Form.Item name="companyName" rules={Rules.requiredRule} label="Company Name" className="c-input w-100">
                   <Input autoComplete={"" + Math.random()} id="company-name" />
                 </Form.Item>
               </Col>
 
               <Col span={12} xs={{ span: 24 }} md={{ span: 12 }}>
-                <Form.Item
-                  name="id"
-                  required
-                  label="Date"
-                  className="c-date-picker w-100"
-                >
+                <Form.Item name="id" required label="Date" className="c-date-picker w-100">
                   <DatePicker
                     // allowClear="true"
                     style={{ width: "100%" }}
@@ -147,57 +108,33 @@ const CUserProfile = ({
               </Col>
 
               <Col span={12} xs={{ span: 24 }} md={{ span: 12 }}>
-                <Form.Item
-                  name="id"
-                  required
-                  label="Start time"
-                  className="c-input w-100"
-                >
+                <Form.Item name="id" required label="Start time" className="c-input w-100">
                   <Input autoComplete={"" + Math.random()} id="company-name" />
                 </Form.Item>
               </Col>
 
               <Col span={12} xs={{ span: 24 }} md={{ span: 12 }}>
-                <Form.Item
-                  name="id"
-                  required
-                  label="Duration"
-                  className="c-input w-100"
-                >
+                <Form.Item name="id" required label="Duration" className="c-input w-100">
                   <Input autoComplete={"" + Math.random()} id="company-name" />
                 </Form.Item>
               </Col>
 
               <Col span={12} xs={{ span: 24 }} md={{ span: 12 }}>
-                <Form.Item
-                  name="id"
-                  required
-                  label="Attach job"
-                  className="c-input w-100"
-                >
+                <Form.Item name="id" required label="Attach job" className="c-input w-100">
                   <Select
                     getPopupContainer={(trigger) => trigger.parentNode}
                     className="select-lg face-interview-panel scroll-to-smooth"
                     placeholder="select"
                   >
                     {jobsAppliedFor[0]?.employmentActivities?.map((i) => (
-                      <Option value={i.jobPost?.jobTitle?.id}>
-                        {" "}
-                        {i.jobPost?.jobTitle?.title}
-                      </Option>
+                      <Option value={i.jobPost?.jobTitle?.id}> {i.jobPost?.jobTitle?.title}</Option>
                     ))}
                   </Select>
                 </Form.Item>
               </Col>
 
               <Col span={12} xs={{ span: 24 }} md={{ span: 12 }}>
-                <Form.Item
-                  required
-                  label="Interview panel"
-                  name="panelUsers"
-                  className="c-input w-100 select-lg"
-                  rules={null}
-                >
+                <Form.Item required label="Interview panel" name="panelUsers" className="c-input w-100 select-lg" rules={null}>
                   <Select
                     mode="multiple"
                     maxTagCount="responsive"
@@ -206,42 +143,21 @@ const CUserProfile = ({
                     placeholder="Saved filters"
                   >
                     {interviewPanelList?.map((d) => (
-                      <Option value={d?.user?.id}>
-                        {getFullName(d?.user)}
-                      </Option>
+                      <Option value={d?.user?.id}>{getFullName(d?.user)}</Option>
                     ))}
                   </Select>
                 </Form.Item>
               </Col>
 
               <Col span={12} xs={{ span: 24 }} md={{ span: 24 }}>
-                <Form.Item
-                  required
-                  label="Other info"
-                  name="notes"
-                  className="c-input"
-                  rules={null}
-                >
-                  <TextArea
-                    placeholder="Please ensure you are dressed smart and bring all of your paper work"
-                    rows={4}
-                  />
+                <Form.Item required label="Other info" name="notes" className="c-input" rules={null}>
+                  <TextArea placeholder="Please ensure you are dressed smart and bring all of your paper work" rows={4} />
                 </Form.Item>
               </Col>
 
               <Col span={24} xs={{ span: 24 }} md={{ span: 24 }}>
-                <Form.Item
-                  required
-                  label="Location"
-                  name="location"
-                  className="c-input"
-                  rules={null}
-                >
-                  <Input
-                    autoComplete={"" + Math.random()}
-                    placeholder=""
-                    id="company-name"
-                  />
+                <Form.Item required label="Location" name="location" className="c-input" rules={null}>
+                  <Input autoComplete={"" + Math.random()} placeholder="" id="company-name" />
                 </Form.Item>
               </Col>
             </Row>
@@ -261,10 +177,7 @@ const CUserProfile = ({
         </Modal>
       </Menu.Item>
       <Menu.Item>
-        <div
-          onClick={() => setShowVideoQuestionareModal(true)}
-          style={{ color: "#5271FF" }}
-        >
+        <div onClick={() => setShowVideoQuestionareModal(true)} style={{ color: "#5271FF" }}>
           send video questionnaire
           <GiCutDiamond fontSize="12px" style={{ marginBottom: "2px" }} />
         </div>
@@ -282,19 +195,9 @@ const CUserProfile = ({
   };
   const renderDocument = (docType) => {
     if (docType === "doc") {
-      return (
-        <img
-          src={require("../../assets/images/icons/filetypes/Wfile.svg")}
-          style={{ marginRight: 5 }}
-        />
-      );
+      return <img src={require("../../assets/images/icons/filetypes/Wfile.svg")} style={{ marginRight: 5 }} />;
     } else if (docType === "pdf") {
-      return (
-        <img
-          src={require("../../assets/images/icons/filetypes/PFile.svg")}
-          style={{ marginRight: 5 }}
-        />
-      );
+      return <img src={require("../../assets/images/icons/filetypes/PFile.svg")} style={{ marginRight: 5 }} />;
     }
     return <FcDocument size="50px" />;
   };
@@ -305,10 +208,7 @@ const CUserProfile = ({
           <div className="about-user">
             <Avatar
               userStatus={userStatus}
-              image={
-                user?.employerProfiles?.profilePhoto ||
-                user?.jobSeekerProfile?.profilePhoto
-              }
+              image={user?.employerProfiles?.profilePhoto || user?.jobSeekerProfile?.profilePhoto}
               onClick={user?.jobSeekerProfile && handleProfile}
             />
             {/* <ProfileCard
@@ -321,15 +221,10 @@ const CUserProfile = ({
               }}
             /> */}
 
-            <h2
-              className="user-name"
-              onClick={user?.jobSeekerProfile && handleProfile}
-            >
+            <h2 className="user-name" onClick={user?.jobSeekerProfile && handleProfile}>
               {getFullName(user)}
             </h2>
-            <p className="user-info">
-              {user?.jobSeekerProfile?.jobTitle?.title}
-            </p>
+            <p className="user-info">{user?.jobSeekerProfile?.jobTitle?.title}</p>
 
             <div className="contact-btns">
               {/* <Button themecolor="rounded green mx-2">
@@ -358,10 +253,7 @@ const CUserProfile = ({
                 <div className="video-questionare-modal-header">
                   <h1>Video Questionare</h1>
                   <span className="select-lg">
-                    <Select
-                      className="scroll-to-smooth"
-                      placeholder="Choose from saved templates"
-                    ></Select>
+                    <Select className="scroll-to-smooth" placeholder="Choose from saved templates"></Select>
                   </span>
                 </div>
 
@@ -372,64 +264,31 @@ const CUserProfile = ({
                 >
                   <div className="video-modal-fields">
                     <div className="form-rows mt-5">
-                      <Form.Item
-                        name="id"
-                        label="Question 1"
-                        className="c-input w-100"
-                      >
-                        <Input
-                          autoComplete={"" + Math.random()}
-                          className="ant-input-w100"
-                          id="company-name"
-                        />
+                      <Form.Item name="id" label="Question 1" className="c-input w-100">
+                        <Input autoComplete={"" + Math.random()} className="ant-input-w100" id="company-name" />
                       </Form.Item>
                     </div>
                     <div className="form-rows">
-                      <Form.Item
-                        name="id"
-                        label="Answer time"
-                        className="c-input w-50 counter"
-                      >
+                      <Form.Item name="id" label="Answer time" className="c-input w-50 counter">
                         <Button
-                          onClick={
-                            timeLimit >= 10
-                              ? () => setTimeLimit(timeLimit - 5)
-                              : () => setTimeLimit(5)
-                          }
+                          onClick={timeLimit >= 10 ? () => setTimeLimit(timeLimit - 5) : () => setTimeLimit(5)}
                           className="rounded minus"
                         >
                           <MinusOutlined />
                         </Button>
                         <Button
-                          onClick={
-                            timeLimit <= 25
-                              ? () => setTimeLimit(timeLimit + 5)
-                              : () => setTimeLimit(30)
-                          }
+                          onClick={timeLimit <= 25 ? () => setTimeLimit(timeLimit + 5) : () => setTimeLimit(30)}
                           className="rounded plus"
                         >
                           <PlusOutlined />
                         </Button>
-                        <Input
-                          autoComplete={"" + Math.random()}
-                          className="ant-input-w100"
-                          value={`${timeLimit} minutes max `}
-                        />
+                        <Input autoComplete={"" + Math.random()} className="ant-input-w100" value={`${timeLimit} minutes max `} />
                       </Form.Item>
-                      <Form.Item
-                        name="id"
-                        className="w-50 align-items-end  flex"
-                      >
+                      <Form.Item name="id" className="w-50 align-items-end  flex">
                         <span className="d-flex justify-content-end align-items-center">
                           <span className="mr-2">Add another</span>
                           <Button
-                            onClick={() =>
-                              setQuestionCounter(
-                                questionCounter < 3
-                                  ? questionCounter + 1
-                                  : questionCounter
-                              )
-                            }
+                            onClick={() => setQuestionCounter(questionCounter < 3 ? questionCounter + 1 : questionCounter)}
                             className="rounded d-flex justify-content-center"
                           >
                             <PlusOutlined />
@@ -441,61 +300,31 @@ const CUserProfile = ({
                   {questionCounter === 2 || questionCounter > 2 ? (
                     <div>
                       <div className="form-rows">
-                        <Form.Item
-                          name="id"
-                          label="Question 2"
-                          className="c-input w-100"
-                        >
-                          <Input
-                            autoComplete={"" + Math.random()}
-                            className="ant-input-w100"
-                            id="company-name"
-                          />
+                        <Form.Item name="id" label="Question 2" className="c-input w-100">
+                          <Input autoComplete={"" + Math.random()} className="ant-input-w100" id="company-name" />
                         </Form.Item>
                       </div>
                       <div className="form-rows">
-                        <Form.Item
-                          name="id"
-                          label="Answer time"
-                          className="c-input w-50 counter"
-                        >
+                        <Form.Item name="id" label="Answer time" className="c-input w-50 counter">
                           <Button
-                            onClick={
-                              timeLimit >= 10
-                                ? () => setTimeLimit(timeLimit - 5)
-                                : () => setTimeLimit(5)
-                            }
+                            onClick={timeLimit >= 10 ? () => setTimeLimit(timeLimit - 5) : () => setTimeLimit(5)}
                             className="rounded minus"
                           >
                             <MinusOutlined />
                           </Button>
                           <Button
-                            onClick={
-                              timeLimit <= 25
-                                ? () => setTimeLimit(timeLimit + 5)
-                                : () => setTimeLimit(30)
-                            }
+                            onClick={timeLimit <= 25 ? () => setTimeLimit(timeLimit + 5) : () => setTimeLimit(30)}
                             className="rounded plus"
                           >
                             <PlusOutlined />
                           </Button>
-                          <Input
-                            autoComplete={"" + Math.random()}
-                            className="ant-input-w100"
-                            value={`${timeLimit} minutes max `}
-                          />
+                          <Input autoComplete={"" + Math.random()} className="ant-input-w100" value={`${timeLimit} minutes max `} />
                         </Form.Item>
                         <Form.Item name="id" className="w-50 align-items-end  ">
                           <span className="d-flex justify-content-end align-items-center">
                             <span className="mr-2">Add another</span>
                             <Button
-                              onClick={() =>
-                                setQuestionCounter(
-                                  questionCounter < 3
-                                    ? questionCounter + 1
-                                    : questionCounter
-                                )
-                              }
+                              onClick={() => setQuestionCounter(questionCounter < 3 ? questionCounter + 1 : questionCounter)}
                               className="rounded d-flex justify-content-center"
                             >
                               <PlusOutlined />
@@ -508,61 +337,31 @@ const CUserProfile = ({
                   {questionCounter === 3 ? (
                     <div>
                       <div className="form-rows">
-                        <Form.Item
-                          name="id"
-                          label="Question 3"
-                          className="c-input w-100"
-                        >
-                          <Input
-                            autoComplete={"" + Math.random()}
-                            className="ant-input-w100"
-                            id="company-name"
-                          />
+                        <Form.Item name="id" label="Question 3" className="c-input w-100">
+                          <Input autoComplete={"" + Math.random()} className="ant-input-w100" id="company-name" />
                         </Form.Item>
                       </div>
                       <div className="form-rows">
-                        <Form.Item
-                          name="id"
-                          label="Answer time"
-                          className="c-input w-50 counter"
-                        >
+                        <Form.Item name="id" label="Answer time" className="c-input w-50 counter">
                           <Button
-                            onClick={
-                              timeLimit >= 10
-                                ? () => setTimeLimit(timeLimit - 5)
-                                : () => setTimeLimit(5)
-                            }
+                            onClick={timeLimit >= 10 ? () => setTimeLimit(timeLimit - 5) : () => setTimeLimit(5)}
                             className="rounded minus"
                           >
                             <MinusOutlined />
                           </Button>
                           <Button
-                            onClick={
-                              timeLimit <= 25
-                                ? () => setTimeLimit(timeLimit + 5)
-                                : () => setTimeLimit(30)
-                            }
+                            onClick={timeLimit <= 25 ? () => setTimeLimit(timeLimit + 5) : () => setTimeLimit(30)}
                             className="rounded plus"
                           >
                             <PlusOutlined />
                           </Button>
-                          <Input
-                            autoComplete={"" + Math.random()}
-                            className="ant-input-w100"
-                            value={`${timeLimit} minutes max `}
-                          />
+                          <Input autoComplete={"" + Math.random()} className="ant-input-w100" value={`${timeLimit} minutes max `} />
                         </Form.Item>
                         <Form.Item name="id" className="w-50 align-items-end  ">
                           <span className="d-flex justify-content-end align-items-center">
                             <span className="mr-2">Add another</span>
                             <Button
-                              onClick={() =>
-                                setQuestionCounter(
-                                  questionCounter < 3
-                                    ? questionCounter + 1
-                                    : questionCounter
-                                )
-                              }
+                              onClick={() => setQuestionCounter(questionCounter < 3 ? questionCounter + 1 : questionCounter)}
                               className="rounded d-flex justify-content-center"
                             >
                               <PlusOutlined />
@@ -575,16 +374,8 @@ const CUserProfile = ({
                   <Row>
                     <Col span={2}></Col>
                     <Col span={20} className="video-call-input-wrapper">
-                      <Form.Item
-                        name="id"
-                        label="Template name"
-                        className="c-input flex"
-                      >
-                        <Input
-                          autoComplete={"" + Math.random()}
-                          style={{ width: "100%" }}
-                          className="video-call-template-input"
-                        />
+                      <Form.Item name="id" label="Template name" className="c-input flex">
+                        <Input autoComplete={"" + Math.random()} style={{ width: "100%" }} className="video-call-template-input" />
                       </Form.Item>
                     </Col>
                     <Col span={2}></Col>
@@ -592,14 +383,9 @@ const CUserProfile = ({
                     <Col span={20}>
                       <Form.Item name="id">
                         <div className="d-flex justify-content-between mt-4">
-                          <Button className="video-modal-buttons">
-                            Save template
-                          </Button>
+                          <Button className="video-modal-buttons">Save template</Button>
                           <span className="flex">or</span>
-                          <Button
-                            className="video-modal-buttons"
-                            themecolor="green"
-                          >
+                          <Button className="video-modal-buttons" themecolor="green">
                             Send
                           </Button>
                         </div>
@@ -615,9 +401,7 @@ const CUserProfile = ({
           <div className="further-info">
             <p className="user-info">About &nbsp;{user?.firstName}</p>
 
-            <p className="user-bio">
-              {user?.jobSeekerProfile?.description || ""}
-            </p>
+            <p className="user-bio">{user?.jobSeekerProfile?.description || ""}</p>
           </div>
           {/* <div onClick={() => setInviteToChat(true)} className="invite-others">
             Invite others to chat
@@ -641,25 +425,18 @@ const CUserProfile = ({
                   <div key={key} className="user-media">
                     <span className="items">
                       <span className="files">
-                        <b
-                          onClick={() => handelDeleteFilesWithAPI(data.id)}
-                          className="mr-2"
-                        >
+                        <b onClick={() => handelDeleteFilesWithAPI(data.id)} className="mr-2">
                           X
                         </b>
 
-                        {data?.fileType === "video" ? (
-                          <FcVideoFile size="50px" />
-                        ) : null}
+                        {data?.fileType === "video" ? <FcVideoFile size="50px" /> : null}
                         {data?.fileType === "image" ? (
                           // <FcImageFile size="50px" />
                           <div className="chat-head">
                             <Avatar image={data?.message} size="small" />
                           </div>
                         ) : null}
-                        {data?.fileType === "document"
-                          ? renderDocument(data?.docType)
-                          : null}
+                        {data?.fileType === "document" ? renderDocument(data?.docType) : null}
                         {/* <img
                               className="user-media-files mr-2"
                               src={require("../../assets/images/icons/filetypes/Wfile.svg")}
@@ -674,22 +451,12 @@ const CUserProfile = ({
                       </span>
                     </span>
                     <span className="download-media">
-                      <img
-                        classname="id"
-                        src={require("../../assets/images/icons/download-icon.svg")}
-                        alt=""
-                      />
+                      <img classname="id" src={require("../../assets/images/icons/download-icon.svg")} alt="" />
                       <a href={data?.message} className="download">
                         Download
                       </a>
                       {/* <p className="user-items-expire">Expires in 29 days.</p> */}
-                      <p className="user-items-expire">
-                        Expires in{" "}
-                        {moment(data.createdAt)
-                          .add(30, "days")
-                          .diff(moment(), "days")}{" "}
-                        days.
-                      </p>
+                      <p className="user-items-expire">Expires in {moment(data.createdAt).add(30, "days").diff(moment(), "days")} days.</p>
                     </span>
                   </div>
                 ))}
@@ -710,24 +477,17 @@ const CUserProfile = ({
                   <div key={key} className="user-media">
                     <span className="items">
                       <span className="files">
-                        <b
-                          onClick={() => handelDeleteFilesWithAPI(data.id)}
-                          className="mr-2"
-                        >
+                        <b onClick={() => handelDeleteFilesWithAPI(data.id)} className="mr-2">
                           X
                         </b>
-                        {data?.fileType === "video" ? (
-                          <FcVideoFile size="50px" />
-                        ) : null}
+                        {data?.fileType === "video" ? <FcVideoFile size="50px" /> : null}
                         {data?.fileType === "image" ? (
                           // <FcImageFile size="50px" />
                           <div className="chat-head">
                             <Avatar image={data?.message} size="small" />
                           </div>
                         ) : null}
-                        {data?.fileType === "document"
-                          ? renderDocument(data?.docType)
-                          : null}
+                        {data?.fileType === "document" ? renderDocument(data?.docType) : null}
                         {/* <img
                               className="user-media-files mr-2"
                               src={require("../../assets/images/icons/filetypes/Wfile.svg")}
@@ -743,22 +503,12 @@ const CUserProfile = ({
                       </span>
                     </span>
                     <span className="download-media">
-                      <img
-                        classname="id"
-                        src={require("../../assets/images/icons/download-icon.svg")}
-                        alt=""
-                      />
+                      <img classname="id" src={require("../../assets/images/icons/download-icon.svg")} alt="" />
                       <a href={data?.message} className="download">
                         Download
                       </a>
                       {/* <p className="user-items-expire">Expires in 29 days.</p> */}
-                      <p className="user-items-expire">
-                        Expires in{" "}
-                        {moment(data.createdAt)
-                          .add(30, "days")
-                          .diff(moment(), "days")}{" "}
-                        days.
-                      </p>
+                      <p className="user-items-expire">Expires in {moment(data.createdAt).add(30, "days").diff(moment(), "days")} days.</p>
                     </span>
                     {/* {console.log("data", data)} */}
                   </div>
@@ -796,13 +546,13 @@ const CUserProfile = ({
             <div className="team-members">
               <div className="team-member">
                 <Checkbox></Checkbox>
-                <img src={require("../../assets/images/ms/ms-1.png")} alt="" />
+                <img src={require("../../assets/images/ms/ms-1.png").default} alt="" />
                 <span>James</span>
               </div>
               <Divider />
               <div className="team-member">
                 <Checkbox></Checkbox>
-                <img src={require("../../assets/images/ms/ms-3.png")} alt="" />
+                <img src={require("../../assets/images/ms/ms-3.png").default} alt="" />
                 <span>Jamshed</span>
               </div>
             </div>
@@ -813,16 +563,8 @@ const CUserProfile = ({
         )}
       </div>
 
-      <Modal
-        className="profile-modal center"
-        show={showProfile}
-        onHide={() => setShowProfile(false)}
-      >
-        <UserProfile
-          showProfile={showProfile}
-          profileDetails={jobsAppliedFor[0]?.id}
-          handleProfile={handleProfile}
-        />
+      <Modal className="profile-modal center" show={showProfile} onHide={() => setShowProfile(false)}>
+        <UserProfile showProfile={showProfile} profileDetails={jobsAppliedFor[0]?.id} handleProfile={handleProfile} />
       </Modal>
     </>
   );

@@ -1,14 +1,4 @@
-import {
-  Divider,
-  Form,
-  Input,
-  Upload,
-  Select,
-  Dropdown,
-  Menu,
-  Row,
-  Col,
-} from "antd";
+import { Divider, Form, Input, Upload, Select, Dropdown, Menu, Row, Col } from "antd";
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import Modal from "../../shared-ui/Modal/Modal";
@@ -64,11 +54,7 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
   );
 
   return (
-    <Modal
-      forceRender
-      className="center x-lg apply-job-modal"
-      show={applyToJobModal}
-      onHide={() => setApplyToJobModal(false)}>
+    <Modal forceRender className="center x-lg apply-job-modal" show={applyToJobModal} onHide={() => setApplyToJobModal(false)}>
       <Form className="main-wrapper">
         {applyModalSubmit ? (
           <>
@@ -76,54 +62,37 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
               <div className="header">
                 <img
                   onClick={() => setapplyModalSubmit(false)}
-                  src={require("../../assets/images/icons/back-button-black.svg")}
+                  src={require("../../assets/images/icons/back-button-black.svg").default}
                   alt=""
                 />
                 <Divider type="horizontal" />
               </div>
               <>
                 <div className="selected-person">
-                  <img
-                    className="selected-cv-img"
-                    src={require("../../assets/images/ms/ms-11.png")}
-                    alt=""
-                  />
+                  <img className="selected-cv-img" src={require("../../assets/images/ms/ms-11.png").default} alt="" />
                   <div className="fee-form">
                     <div className="name">John Adams</div>
                     <div className="fee-row">
                       <Form.Item name="id" className="c-input w-100 counter">
                         <label htmlFor="">Fee Percentage</label>
                         <Button
-                          onClick={
-                            feePercentage >= 1
-                              ? () => setFeePercentage(feePercentage - 1)
-                              : () => setFeePercentage(0)
-                          }
-                          className="rounded minus">
+                          onClick={feePercentage >= 1 ? () => setFeePercentage(feePercentage - 1) : () => setFeePercentage(0)}
+                          className="rounded minus"
+                        >
                           -
                         </Button>
                         <Button
-                          onClick={
-                            feePercentage <= 7
-                              ? () => setFeePercentage(feePercentage + 1)
-                              : () => setFeePercentage(8)
-                          }
-                          className="rounded plus">
+                          onClick={feePercentage <= 7 ? () => setFeePercentage(feePercentage + 1) : () => setFeePercentage(8)}
+                          className="rounded plus"
+                        >
                           +
                         </Button>
-                        <Input
-                          className="ant-input-w100"
-                          value={feePercentage}
-                          autoComplete={"" + Math.random()}
-                        />
+                        <Input className="ant-input-w100" value={feePercentage} autoComplete={"" + Math.random()} />
                       </Form.Item>
                       <span className="px-2 mb-2">or</span>
                       <Form.Item name="id" className="c-input w-100">
                         <label htmlFor="">Fixed fee</label>
-                        <Input
-                          className="ant-input-w100"
-                          autoComplete={"" + Math.random()}
-                        />
+                        <Input className="ant-input-w100" autoComplete={"" + Math.random()} />
                       </Form.Item>
 
                       <Divider type="vertical" />
@@ -140,35 +109,25 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
               <Button className="ml-auto mr-4">Submit</Button>
             </div>
             <div className="right-section-2">
-              <img
-                className="logo"
-                src={require("../../assets/images/logo/logo-md.png")}
-                alt=""
-              />
+              <img className="logo" src={require("../../assets/images/logo/logo-md.png").default} alt="" />
               <div className="text-section">
                 <ul>
                   <li>
-                    Choose from profiles on{" "}
-                    <a href="jobsmideast.com">Jobsmideast.com</a> or upload CV's
+                    Choose from profiles on <a href="jobsmideast.com">Jobsmideast.com</a> or upload CV's
                   </li>
                   <li>Set a percentage or a fixed fee per candidate.</li>
                   <li>Submit profiles to an employer</li>
                   <li>Get paid directly to ypur bank account.</li>
-                  <li>
-                    10% percent of the fee will be taken by Jobsmideast.com and
-                    90% will be released to the agency.
-                  </li>
+                  <li>10% percent of the fee will be taken by Jobsmideast.com and 90% will be released to the agency.</li>
                 </ul>
                 <div>
                   <div className="title">Note:</div>
                   <div className="content">
-                    Agencies can charge employers up to 8% of the Candidates
-                    annual salary, or offer employers a fixed fee per CV.
+                    Agencies can charge employers up to 8% of the Candidates annual salary, or offer employers a fixed fee per CV.
                   </div>
                   <br />
                   <div className="content">
-                    Employers can choose agencies based on the lowest rates, or
-                    the lowest rates offered per placement. Keep your rates
+                    Employers can choose agencies based on the lowest rates, or the lowest rates offered per placement. Keep your rates
                     competitive, and your applicants quality high!
                   </div>
                 </div>
@@ -180,9 +139,7 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
             <div className="left-section">
               <Form.Item name="id" className="select-lg pb-4">
                 <div className="title">Search Candidates</div>
-                <Select
-                  className="scroll-to-smooth"
-                  placeholder="Search"></Select>
+                <Select className="scroll-to-smooth" placeholder="Search"></Select>
               </Form.Item>
               <Form.Item name="id" className="upload-cv">
                 <Dragger {...props}>
@@ -212,39 +169,18 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
                     src={require("../../assets/images/ms/ms-10.png")}
                     alt=""
                   />
-                  <img
-                    className="selected-cv-img"
-                    src={require("../../assets/images/ms/ms-8.png")}
-                    alt=""
-                  />
-                  <img
-                    className="selected-cv-img"
-                    src={require("../../assets/images/ms/ms-5.png")}
-                    alt=""
-                  />
-                  <img
-                    className="selected-cv-img"
-                    src={require("../../assets/images/icons/add-cv-icon.svg")}
-                    alt=""
-                  />
-                  <img
-                    className="selected-cv-img"
-                    src={require("../../assets/images/icons/add-cv-icon.svg")}
-                    alt=""
-                  />
+                  <img className="selected-cv-img" src={require("../../assets/images/ms/ms-8.png").default} alt="" />
+                  <img className="selected-cv-img" src={require("../../assets/images/ms/ms-5.png").default} alt="" />
+                  <img className="selected-cv-img" src={require("../../assets/images/icons/add-cv-icon.svg").default} alt="" />
+                  <img className="selected-cv-img" src={require("../../assets/images/icons/add-cv-icon.svg").default} alt="" />
                 </div>
               </div>
               {showCV ? (
                 <div className="cv-wrapper">
                   <div className="header">
-                    <img
-                      onClick={() => setshowCV(false)}
-                      src={require("../../assets/images/icons/back-button-black.svg")}
-                      alt=""
-                    />
+                    <img onClick={() => setshowCV(false)} src={require("../../assets/images/icons/back-button-black.svg").default} alt="" />
                   </div>
-                  <Document
-                    file={require("../../assets/pdf/Hassan Resume.pdf")}>
+                  <Document file={require("../../assets/pdf/Hassan Resume.pdf")}>
                     <Page pageNumber={1} />
                     {/* {console.log("hi")} */}
                   </Document>
@@ -253,40 +189,27 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
             </div>
 
             <div className="right-section">
-              <img
-                className="selected-cv-img"
-                src={require("../../assets/images/ms/ms-10.png")}
-                alt=""
-              />
+              <img className="selected-cv-img" src={require("../../assets/images/ms/ms-10.png").default} alt="" />
               <Dropdown
                 className="add-media-btn"
                 getPopupContainer={(trigger) => trigger.parentNode}
                 overlay={uploadMediaMenu}
                 overlayClassName={"profile-menu"}
                 placement="bottomRight"
-                trigger={["click"]}>
-                <Button
-                  themecolor="rounded-outlined"
-                  className="primary outlined">
+                trigger={["click"]}
+              >
+                <Button themecolor="rounded-outlined" className="primary outlined">
                   <PlusOutlined />
                 </Button>
               </Dropdown>
               <Form className="w-100">
                 <Form.Item name="id" className="c-input w-100 pb-3">
                   <label htmlFor="">Name</label>
-                  <Input
-                    placeholder="John Adams"
-                    className="ant-input-w100"
-                    autoComplete={"off"}
-                  />
+                  <Input placeholder="John Adams" className="ant-input-w100" autoComplete={"off"} />
                 </Form.Item>
                 <Form.Item name="id" className="c-input w-100 pb-3">
                   <label htmlFor="">Job Title</label>
-                  <Input
-                    placeholder="John Adams"
-                    className="ant-input-w100"
-                    autoComplete={"off"}
-                  />
+                  <Input placeholder="John Adams" className="ant-input-w100" autoComplete={"off"} />
                 </Form.Item>
                 <Form.Item name="id" className="c-text-box pb-3">
                   <label htmlFor="">Candidate Description</label>
@@ -296,9 +219,7 @@ const ApplyToJobModal = ({ applyToJobModal, setApplyToJobModal }) => {
                   Update
                 </Button>
               </Form>
-              <Button
-                onClick={() => setapplyModalSubmit(true)}
-                className="mt-5">
+              <Button onClick={() => setapplyModalSubmit(true)} className="mt-5">
                 Next
               </Button>
             </div>

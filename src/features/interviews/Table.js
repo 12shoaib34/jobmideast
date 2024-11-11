@@ -55,21 +55,12 @@ const CandidateTable = () => {
         return (
           <div className="user-name-cell">
             <div className="d-flex align-items-center">
-              <img
-                className="user-image"
-                src={require(`../../assets/images/ms/ms-3.png`)}
-              />
+              <img className="user-image" src={require(`../../assets/images/ms/ms-3.png`)} />
               <p className="mx-3 mb-0">{index.name}</p>
             </div>
             <div className="trash-n-chat">
-              <img
-                className="trash"
-                src={require("../../assets/images/icons/trash-icon.svg")}
-              />
-              <img
-                className="chat"
-                src={require("../../assets/images/icons/directchat-icon.svg")}
-              />
+              <img className="trash" src={require("../../assets/images/icons/trash-icon.svg")} />
+              <img className="chat" src={require("../../assets/images/icons/directchat-icon.svg")} />
             </div>
           </div>
         );
@@ -102,9 +93,9 @@ const CandidateTable = () => {
       render: () => {
         return (
           <div className="inter-panel-images">
-            <img src={require("../../assets/images/ms/ms-1.png")} alt="" />
-            <img src={require("../../assets/images/ms/ms-2.png")} alt="" />
-            <img src={require("../../assets/images/ms/ms-4.png")} alt="" />
+            <img src={require("../../assets/images/ms/ms-1.png").default} alt="" />
+            <img src={require("../../assets/images/ms/ms-2.png").default} alt="" />
+            <img src={require("../../assets/images/ms/ms-4.png").default} alt="" />
           </div>
         );
       },
@@ -116,12 +107,7 @@ const CandidateTable = () => {
       render: () => {
         return (
           <div className="write-notes-wrapper">
-            <textarea
-              placeholder="Write notes..."
-              className="write-notes"
-              name="id"
-              id=""
-              cols="30"></textarea>
+            <textarea placeholder="Write notes..." className="write-notes" name="id" id="" cols="30"></textarea>
           </div>
         );
       },
@@ -147,13 +133,8 @@ const CandidateTable = () => {
   const menu = (
     <>
       <Form layout={"vertical"} className="c-dropdown-cetegory">
-        <Form.Item
-          name="id"
-          label={<label>Add new category</label>}
-          className="select-w100">
-          <Select
-            getPopupContainer={(trigger) => trigger.parentNode}
-            placeholder="Select">
+        <Form.Item name="id" label={<label>Add new category</label>} className="select-w100">
+          <Select getPopupContainer={(trigger) => trigger.parentNode} placeholder="Select">
             <Option value="view all">Complete</Option>
             <Option value="view all">Rejected</Option>
             <Option value="view all">Hire</Option>

@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import {
-  emptyCart,
-  selectCart,
-  defaultBuyCartSuccess,
-  selectPackageBoughtAmount,
-} from "./slice";
+import { emptyCart, selectCart, defaultBuyCartSuccess, selectPackageBoughtAmount } from "./slice";
 import Button from "./../../shared-ui/Button/Button";
 const Successfull = () => {
   const history = useHistory();
@@ -40,14 +35,8 @@ const Successfull = () => {
       <div className="box">
         <div className="top">
           <div className="in-line">
-            <img
-              className="check-icon"
-              src={require("../../assets/images/icons/check-icon.svg")}
-            />{" "}
-            <p>
-              Your payment has been Successful. Your order has now been added to
-              your profile.
-            </p>
+            <img className="check-icon" src={require("../../assets/images/icons/check-icon.svg")} />{" "}
+            <p>Your payment has been Successful. Your order has now been added to your profile.</p>
           </div>
         </div>
         <div className="px-3 d-flex w-100 justify-content-between">
@@ -77,15 +66,15 @@ const Successfull = () => {
           <p>&#xa3;{totalAmount}</p>
         </div>
         <p style={{ fontSize: "11px" }}>
-          We Will send you an email confirmation with your order details
-          attached. Alternatively you can download your transaction by going to{" "}
-          <strong>My credits</strong> and click on <strong>Transactions</strong>
+          We Will send you an email confirmation with your order details attached. Alternatively you can download your transaction by going
+          to <strong>My credits</strong> and click on <strong>Transactions</strong>
         </p>
         <div
           className="flex go-to-my-jobs"
           onClick={() => {
             history.push("/my-jobs");
-          }}>
+          }}
+        >
           <Button themecolor="outlined-green ">Go to my jobs</Button>
         </div>
       </div>

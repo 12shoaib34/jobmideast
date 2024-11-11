@@ -8,20 +8,9 @@ import { Switch } from "antd";
 import CModal from "../../shared-ui/Modal/Modal";
 import "./_Settings.scss";
 import { useAppSelector, useAppDispatch } from "../../store/hooks";
-import {
-  selectSettings,
-  selectStatus,
-  selectUpdatePasswordSuccess,
-  selectFeedbackSuccess,
-} from "./slice";
+import { selectSettings, selectStatus, selectUpdatePasswordSuccess, selectFeedbackSuccess } from "./slice";
 import VideoQuestionares from "../../app-ui/VideoQuestionares/VideoQuestionares";
-import {
-  getSettings,
-  updateSettings,
-  postFeedback,
-  deleteAccount as delAccount,
-  updatePassword,
-} from "./thunk";
+import { getSettings, updateSettings, postFeedback, deleteAccount as delAccount, updatePassword } from "./thunk";
 import "./_Responsive.scss";
 import { showErrorMessage, showSuccessMessage } from "../../utils/message";
 
@@ -107,38 +96,34 @@ function Settings() {
     <>
       <div className="container-fluid notification-setting-contaier">
         {/* <div className="back-btn" onClick={() => window.history.back()}>
-          <img src={require("../../assets/images/icons/Back.svg")} alt="" />
+          <img src={require("../../assets/images/icons/Back.svg").default} alt="" />
         </div> */}
         <div className="container setting-main">
           <div className="row">
             <div className="col-lg-12 col-12 m-auto settings-grid">
               <div className="settings-header">
-                <h4 className="notfication-heading">
-                  Notifications and Settings
-                </h4>
+                <h4 className="notfication-heading">Notifications and Settings</h4>
               </div>
               <div className="inner-seting-items">
-                <h1 className="settings-items-heading">
-                  Settings for employers
-                </h1>
+                <h1 className="settings-items-heading">Settings for employers</h1>
                 <Form name="sdd" form={form} onValuesChange={onChange}>
                   <Form.Item
                     valuePropName="checked"
                     className="c-switch first-option"
                     label="Receive applications from agencies"
-                    name="ReceiveApplicationsFromAgencies">
+                    name="ReceiveApplicationsFromAgencies"
+                  >
                     <Switch size="large" className="mr-2 c-margin switch-top" />
                   </Form.Item>
-                  <h1 className="setiing-desc">
-                    Receive an emails when (on off buttons)
-                  </h1>
+                  <h1 className="setiing-desc">Receive an emails when (on off buttons)</h1>
                   <div className="settings-cells-row">
                     <div className="settings-cells">
                       <Form.Item
                         valuePropName="checked"
                         className="c-switch"
                         label="Agencies apply to your jobs"
-                        name="AgenciesApplytoYourJob">
+                        name="AgenciesApplytoYourJob"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
@@ -146,65 +131,59 @@ function Settings() {
                         className="c-switch"
                         label="New message from agency"
                         name="NewMessageFromAgency"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="New message from team members"
                         className="c-switch"
-                        name="NewMessageFromTeamMembers">
+                        name="NewMessageFromTeamMembers"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="New message from job seekers"
                         name="NewMessageFromJobSeekers"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="New team chat has been created"
                         name="NewTeamChatHasBeenCreated"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="New review on company page"
                         name="NewReviewOnCompanyPage"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="New message from Jobsmideast"
                         name="NewMessageFromJobmideast"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                     </div>
                     <div className="settings-cells">
-                      <Form.Item
-                        valuePropName="checked"
-                        label="New team member joined"
-                        name="NewTeamMemberJoined"
-                        className="c-switch">
+                      <Form.Item valuePropName="checked" label="New team member joined" name="NewTeamMemberJoined" className="c-switch">
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
-                      <Form.Item
-                        valuePropName="checked"
-                        label="Interview accepted"
-                        name="InterviewAccepted"
-                        className="c-switch">
+                      <Form.Item valuePropName="checked" label="Interview accepted" name="InterviewAccepted" className="c-switch">
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
-                      <Form.Item
-                        valuePropName="checked"
-                        label="Interview rejected"
-                        name="InterviewRejected"
-                        className="c-switch">
+                      <Form.Item valuePropName="checked" label="Interview rejected" name="InterviewRejected" className="c-switch">
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
 
@@ -212,28 +191,32 @@ function Settings() {
                         valuePropName="checked"
                         label="Application submission by a job seeker"
                         name="ApplicationSubmissionByaJobSeeker"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="Application submission by an agency"
                         name="ApplicationSubmissionByAnAgency"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="Discounts & Promotions from Jobsmideast"
                         name="DiscountsandPromotionsFromJobmideast"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="Important messages from Jobsmideast"
                         name="ImportantMessagesFromJobmideast"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                     </div>
@@ -242,23 +225,22 @@ function Settings() {
                         valuePropName="checked"
                         label="New features added to Jobsmideast"
                         name="NewFeatureAddedtoJobmideast"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <Form.Item
                         valuePropName="checked"
                         label="Matching profile is registered"
                         name="MatchingProfileisRegistered"
-                        className="c-switch">
+                        className="c-switch"
+                      >
                         <Switch size="large" className="mr-2" />
                       </Form.Item>
                       <h1 className="credential-settings">Change password</h1>
                       <div className="credentials-cell">
                         <Form form={changePasswordForm} onFinish={onFinish}>
-                          <Form.Item
-                            name="oldPassword"
-                            className="c-input form-padding"
-                            rules={Rules.passwordRule}>
+                          <Form.Item name="oldPassword" className="c-input form-padding" rules={Rules.passwordRule}>
                             {/* <Input
                               autoComplete="newpassword"
                               placeholder="enter old password here"
@@ -269,32 +251,17 @@ function Settings() {
                               autoComplete="off"
                               placeholder="Current password"
                               type="password"
-                              iconRender={(visible) =>
-                                visible ? (
-                                  <EyeTwoTone />
-                                ) : (
-                                  <EyeInvisibleOutlined />
-                                )
-                              }
+                              iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                             />
                             {/* <Input.Password autoComplete={'' + Math.random()} placeholder="Confirm password" /> */}
                           </Form.Item>
                           <div className="d-flex">
-                            <Form.Item
-                              name="password"
-                              className="c-input form-padding"
-                              rules={Rules.passwordRule}>
+                            <Form.Item name="password" className="c-input form-padding" rules={Rules.passwordRule}>
                               <Input.Password
                                 autoComplete="off"
                                 placeholder="New password"
                                 type="password"
-                                iconRender={(visible) =>
-                                  visible ? (
-                                    <EyeTwoTone />
-                                  ) : (
-                                    <EyeInvisibleOutlined />
-                                  )
-                                }
+                                iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                               />
                             </Form.Item>
                             <CButton
@@ -308,13 +275,13 @@ function Settings() {
                                 marginTop: "20px",
                                 padding: "5px 25px",
                               }}
-                              block>
+                              block
+                            >
                               Update
                             </CButton>
                           </div>
                           <p className="items-desc item-desc-width">
-                            Password must at least be 8 characters and a mixture
-                            of both uppercase and lowercase letters.
+                            Password must at least be 8 characters and a mixture of both uppercase and lowercase letters.
                           </p>
 
                           {/* ------------------------------ */}
@@ -343,9 +310,7 @@ function Settings() {
                   </div>
                 </Form>
                 <div className="delete-account-btn">
-                  <p onClick={() => setDeleteAccount(true)}>
-                    Delete my account
-                  </p>
+                  <p onClick={() => setDeleteAccount(true)}>Delete my account</p>
                 </div>
               </div>
             </div>
@@ -353,17 +318,12 @@ function Settings() {
         </div>
       </div>
 
-      <CModal
-        className="center medium "
-        onHide={() => setDeleteAccount(false)}
-        show={deleteAccount}>
+      <CModal className="center medium " onHide={() => setDeleteAccount(false)} show={deleteAccount}>
         <div className="delete-modal">
           <div className="heading">Delete Account</div>
           <div className="text">
-            Once you delete your account all of your information such as
-            personal details, outstanding interviews, conversations, reviews and
-            any other form of communication/info will be completely deleted.
-            Would you still like to delete your account?
+            Once you delete your account all of your information such as personal details, outstanding interviews, conversations, reviews
+            and any other form of communication/info will be completely deleted. Would you still like to delete your account?
           </div>
           <div className="buttons">
             <CButton
@@ -371,7 +331,8 @@ function Settings() {
                 setDeleteAccount(false);
               }}
               className="mr-3"
-              themecolor="grey">
+              themecolor="grey"
+            >
               Cancel
             </CButton>
             <CButton
@@ -379,29 +340,26 @@ function Settings() {
                 setFeedback(true);
                 setDeleteAccount(false);
               }}
-              themecolor="primary">
+              themecolor="primary"
+            >
               Confirm
             </CButton>
           </div>
         </div>
       </CModal>
-      <CModal
-        className="center medium"
-        onHide={() => setFeedback(false)}
-        show={feedback}>
+      <CModal className="center medium" onHide={() => setFeedback(false)} show={feedback}>
         <div className="feedback-modal">
           <div className="text">
-            We are sad to see you go! Could you please tell us why you're
-            looking to delete your account? We always listen to your feedback
-            and will try our best to improve our services and we hope to see you
-            back again!
+            We are sad to see you go! Could you please tell us why you're looking to delete your account? We always listen to your feedback
+            and will try our best to improve our services and we hope to see you back again!
           </div>
           <div className="feedback-text-area">
             Feedback
             <Form onFinish={onFinishDelete}>
               <Form.Item
                 // label="Feed Back"
-                name="feedBack">
+                name="feedBack"
+              >
                 <TextArea rows={4} />
               </Form.Item>
               <Form.Item>
@@ -413,7 +371,8 @@ function Settings() {
                     //   // handleDeleteButtonWithFeedBack();
                     // }}
                     htmlType="submit"
-                    themecolor="primary">
+                    themecolor="primary"
+                  >
                     Submit and delete
                   </CButton>
                 </div>

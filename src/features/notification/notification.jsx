@@ -58,9 +58,7 @@ const Notification = () => {
   const getNotificationList = (res) => {
     const notificationsGroupByDate = [];
     for (const notification of res.data.items) {
-      const notificationDate = moment(notification.createdAt).format(
-        "DD-MM-YYYY"
-      );
+      const notificationDate = moment(notification.createdAt).format("DD-MM-YYYY");
       let found = false;
       for (const item of notificationsGroupByDate) {
         if (notificationDate === item.date) {
@@ -110,7 +108,7 @@ const Notification = () => {
   //     </Link>
 
   //     <div className="page-title">
-  //       <img src={require("../../assets/images/icons/bell.svg")} alt="" />
+  //       <img src={require("../../assets/images/icons/bell.svg").default} alt="" />
 
   //       <h1>Notifications</h1>
   //     </div>
@@ -134,7 +132,7 @@ const Notification = () => {
 
   //       <div className="notification-row">
   //         <div className="image-cell">
-  //           <img src={require("../../assets/images/icons/cv.svg")} alt="" />
+  //           <img src={require("../../assets/images/icons/cv.svg").default} alt="" />
   //         </div>
 
   //         <div className="notification-content">
@@ -158,14 +156,10 @@ const Notification = () => {
   return (
     <div className="notification-page">
       <div className="back-btn" onClick={() => window.history.back()}>
-        <img
-          className="back-icon"
-          src={require("../../assets/images/icons/Back.svg")}
-          alt=""
-        />
+        <img className="back-icon" src={require("../../assets/images/icons/Back.svg")} alt="" />
       </div>
       <div className="page-title">
-        <img src={require("../../assets/images/icons/Bell-black.svg")} alt="" />
+        <img src={require("../../assets/images/icons/Bell-black.svg").default} alt="" />
         <h1>Notifications</h1>
       </div>
 
@@ -173,11 +167,7 @@ const Notification = () => {
         {notifRef.current.items.map((notificationGroup, i) => (
           <div className="notification-section" key={i}>
             <div className="row-header">
-              <span className="title">
-                {notificationGroup.date === moment().format("DD-MM-YYYY")
-                  ? "Today"
-                  : notificationGroup.date}
-              </span>
+              <span className="title">{notificationGroup.date === moment().format("DD-MM-YYYY") ? "Today" : notificationGroup.date}</span>
             </div>
             {console.table("notificationGroup.data", notificationGroup.data)}
             {notificationGroup.data.map((d, index) => (
@@ -186,7 +176,8 @@ const Notification = () => {
                   initiateChat(d.userId);
                 }}
                 className="notification-row"
-                key={`${i}_${index}`}>
+                key={`${i}_${index}`}
+              >
                 <div className="image-cell">
                   <img src={emailIcon} alt="ico" />
                 </div>
@@ -203,7 +194,7 @@ const Notification = () => {
 
         {/* <div className="notification-row">
           <div className="image-cell">
-            <img src={require("../../assets/images/icons/cv.svg")} alt="" />
+            <img src={require("../../assets/images/icons/cv.svg").default} alt="" />
           </div>
 
           <div className="notification-content">

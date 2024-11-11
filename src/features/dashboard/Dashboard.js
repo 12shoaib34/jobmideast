@@ -91,7 +91,7 @@ function Dashboard() {
               <div className="card-row-wrapper">
                 <div className="card-row">
                   <StatisticCard
-                    src={require("../../assets/images/dashboard/yellow.png")}
+                    src={require("../../assets/images/dashboard/yellow.png").default}
                     count={jobCredits}
                     content="Job credits"
                     goto={jobCredits === 0 ? "/credits" : "/my-jobs"}
@@ -99,13 +99,13 @@ function Dashboard() {
                   />
                   {/** these cards are made unclickable for now, just uncomment the  "goto"  prop */}
                   <StatisticCard
-                    src={require("../../assets/images/dashboard/light-green.png")}
+                    src={require("../../assets/images/dashboard/light-green.png").default}
                     count={contactCredits}
                     content="Contact credits"
                     goto="/credits"
                   />
                   <StatisticCard
-                    src={require("../../assets/images/dashboard/green.png")}
+                    src={require("../../assets/images/dashboard/green.png").default}
                     count={newMessages}
                     content="New messages"
                     goto="/chat"
@@ -113,20 +113,20 @@ function Dashboard() {
                 </div>
                 <div className="card-row">
                   <StatisticCard
-                    src={require("../../assets/images/dashboard/purple.png")}
+                    src={require("../../assets/images/dashboard/purple.png").default}
                     count={newApplication}
                     content="New applications"
                     goto="/"
                   />
                   <StatisticCard
-                    src={require("../../assets/images/dashboard/sky-blue.png")}
+                    src={require("../../assets/images/dashboard/sky-blue.png").default}
                     count={interviewsToday}
                     content="Interviews today"
                     goto="/"
                   />
 
                   <StatisticCard
-                    src={require("../../assets/images/dashboard/pink.png")}
+                    src={require("../../assets/images/dashboard/pink.png").default}
                     count={teamMembers}
                     content="Team members"
                     onClick={() => handleScrollToGivenRef(teamMembersRef)}

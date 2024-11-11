@@ -142,9 +142,7 @@ function LayoutWrap() {
       {isLoading && (
         <div className="center-loader">
           {/* <Spin spinning={isLoading} tip="please wait..." size="large" /> */}
-          <img
-            className="loader-theme"
-            src={require("../assets/videos/sample/loader.gif")}></img>
+          <img className="loader-theme" src={require("../assets/videos/sample/loader.gif")}></img>
         </div>
       )}
 
@@ -166,7 +164,8 @@ function LayoutWrap() {
           style={{
             height: windowHeight,
           }}
-          className="c-layout">
+          className="c-layout"
+        >
           <Header unReadCount={setGetUnreadCount} />
 
           <Sidebar notification={getUnreadCount} routes={Routes} />
@@ -174,12 +173,7 @@ function LayoutWrap() {
           <div className="content">
             <Switch>
               {Routes.map((route, index) => (
-                <Route
-                  key={index}
-                  exact={route.exact}
-                  path={route.path}
-                  component={route.component}
-                />
+                <Route key={index} exact={route.exact} path={route.path} component={route.component} />
               ))}
 
               {/* <Redirect from="/" to="/dashboard" /> */}
